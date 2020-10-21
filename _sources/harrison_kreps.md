@@ -61,7 +61,7 @@ import scipy.linalg as la
 
 Prior to reading the following, you might like to review our lectures on
 
-* {doc}`Markov chains <finite_markov>`
+* [Markov chains](https://python.quantecon.org/finite_markov.html)
 * {doc}`Asset pricing with finite state space <markov_asset>`
 
 ### Bubbles

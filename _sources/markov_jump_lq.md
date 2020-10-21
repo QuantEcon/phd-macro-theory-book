@@ -940,6 +940,6 @@ The following lectures describe how Markov jump linear quadratic dynamic program
 of optimal tax-smoothing and government debt in several interesting directions
 
 1. {doc}`How to Pay for a War: Part 1 <tax_smoothing_1>`
-1. {doc}`How to Pay for a War: Part 2 <tax_smoothing_2>`
-1. {doc}`How to Pay for a War: Part 3 <tax_smoothing_3>`
+2. [How to Pay for a War: Part 2](https://python-advanced.quantecon.org/tax_smoothing_2.html)
+3. [How to Pay for a War: Part 3](https://python-advanced.quantecon.org/tax_smoothing_3.html)
 

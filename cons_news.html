@@ -184,19 +184,19 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already up-to-date: quantecon in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (0.4.8)
-Requirement already satisfied, skipping upgrade: requests in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (2.24.0)
-Requirement already satisfied, skipping upgrade: numpy in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (1.18.5)
 Requirement already satisfied, skipping upgrade: sympy in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (1.6.1)
-Requirement already satisfied, skipping upgrade: numba&gt;=0.38 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (0.50.1)
 Requirement already satisfied, skipping upgrade: scipy&gt;=1.0.0 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (1.5.0)
-Requirement already satisfied, skipping upgrade: idna&lt;3,&gt;=2.5 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (2.10)
+Requirement already satisfied, skipping upgrade: requests in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (2.24.0)
+Requirement already satisfied, skipping upgrade: numba&gt;=0.38 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (0.50.1)
+Requirement already satisfied, skipping upgrade: numpy in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (1.18.5)
+Requirement already satisfied, skipping upgrade: mpmath&gt;=0.19 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from sympy-&gt;quantecon) (1.1.0)
 Requirement already satisfied, skipping upgrade: certifi&gt;=2017.4.17 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (2020.6.20)
 Requirement already satisfied, skipping upgrade: chardet&lt;4,&gt;=3.0.2 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (3.0.4)
+Requirement already satisfied, skipping upgrade: idna&lt;3,&gt;=2.5 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (2.10)
 Requirement already satisfied, skipping upgrade: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (1.25.9)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied, skipping upgrade: mpmath&gt;=0.19 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from sympy-&gt;quantecon) (1.1.0)
-Requirement already satisfied, skipping upgrade: llvmlite&lt;0.34,&gt;=0.33.0.dev0 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (0.33.0+1.g022ab0f)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied, skipping upgrade: llvmlite&lt;0.34,&gt;=0.33.0.dev0 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (0.33.0+1.g022ab0f)
 Requirement already satisfied, skipping upgrade: setuptools in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (49.2.0.post20200714)
 </pre></div>
 </div>
@@ -232,7 +232,7 @@ their <strong>future</strong> nonfinancial incomes.</p>
 model</p></li>
 <li><p>how the Kalman filter introduced in <a class="reference external" href="https://python-intro.quantecon.org/kalman.html">this lecture</a>
 and/or the theory of optimal
-forecasting introduced in <span class="xref std std-doc">this lecture</span>
+forecasting introduced in <a class="reference external" href="https://python-advanced.quantecon.org/classical_filtering.html">this lecture</a>
 embody lessons
 that can be applied to the <strong>news</strong> and <strong>noise</strong> literature</p></li>
 <li><p>various ways of representing and computing optimal decision rules in
@@ -243,7 +243,7 @@ permanent increases in taxes that is just sufficient to cover the interest
 payments used to service the risk-free government bonds that are issued to finance
 the tax cut</p></li>
 <li><p>a simple application of alternative ways to factor a covariance
-generating function along lines described in <span class="xref std std-doc">this lecture</span></p></li>
+generating function along lines described in <a class="reference external" href="https://python-advanced.quantecon.org/classical_filtering.html">this lecture</a></p></li>
 </ul>
 <p>This lecture can be regarded as an introduction to some of the <strong>invertibility</strong> issues that take center stage in
 the analysis of <strong>fiscal foresight</strong> by Eric Leeper, Todd Walker, and Susan Yang <a class="bibtex reference internal" href="zreferences.html#leeper-walker-yang" id="id1">[LWY13]</a>.</p>
@@ -305,7 +305,7 @@ h(L) = \frac{ I -\beta^{-1} L}{ I - \beta L}
 \]</div>
 <p>Let <span class="math notranslate nohighlight">\(g_j \equiv E z_t z_{t-j}\)</span> be the <span class="math notranslate nohighlight">\(j\)</span>th autocovariance
 of the <span class="math notranslate nohighlight">\(\{y_t - y_{t-1}\}\)</span> process.</p>
-<p>Using calculations in the <span class="xref std std-doc">quantecon lecture</span>, where
+<p>Using calculations in the <a class="reference external" href="https://python-advanced.quantecon.org/classical_filtering.html">quantecon lecture</a>, where
 <span class="math notranslate nohighlight">\(z \in C\)</span> is a complex variable, the covariance generating
 function <span class="math notranslate nohighlight">\(g (z) =
 \sum_{j=-\infty}^\infty g_j z^j\)</span>
@@ -361,7 +361,7 @@ computed that
 <span class="math notranslate nohighlight">\(K = \beta^2, \sigma_a^2 = \beta^{-2} \sigma_\epsilon^2 = \beta^{-2},\)</span>
 and <span class="math notranslate nohighlight">\(\Sigma = (1-\beta^2) \sigma_\epsilon^2\)</span>.</p>
 <p>We can also obtain these formulas via the classical filtering theory
-described in <span class="xref std std-doc">this lecture</span>.</p>
+described in <a class="reference external" href="https://python-advanced.quantecon.org/classical_filtering.html">this lecture</a>.</p>
 </div>
 <div class="section" id="news-shocks-and-less-informative-shocks">
 <h3><span class="section-number">3.2.2. </span>News Shocks and Less Informative Shocks<a class="headerlink" href="#news-shocks-and-less-informative-shocks" title="Permalink to this headline">¶</a></h3>
@@ -854,7 +854,7 @@ case, we can simply replace the corresponding matrices.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f842696e550&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f78ca36e250&gt;
 </pre></div>
 </div>
 <img alt="_images/cons_news_15_1.png" src="_images/cons_news_15_1.png" />
@@ -891,7 +891,7 @@ permanently <strong>decreases</strong> by <span class="math notranslate nohighli
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8426755c10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f78ca1d2eb0&gt;
 </pre></div>
 </div>
 <img alt="_images/cons_news_18_1.png" src="_images/cons_news_18_1.png" />
@@ -930,7 +930,7 @@ of consumers while always presenting both types with the same
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8426364400&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f78c9eec8e0&gt;
 </pre></div>
 </div>
 <img alt="_images/cons_news_21_1.png" src="_images/cons_news_21_1.png" />
@@ -948,7 +948,7 @@ of consumers while always presenting both types with the same
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8426358610&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f78c9ebf8e0&gt;
 </pre></div>
 </div>
 <img alt="_images/cons_news_22_1.png" src="_images/cons_news_22_1.png" />
@@ -1014,7 +1014,7 @@ computed earlier.</p>
 </div>
 <div class="section" id="another-invertibility-issue">
 <h3><span class="section-number">3.3.4. </span>Another Invertibility Issue<a class="headerlink" href="#another-invertibility-issue" title="Permalink to this headline">¶</a></h3>
-<p>This <span class="xref std std-doc">quantecon lecture</span> contains another example of a shock-invertibility issue that is endemic
+<p>This <a class="reference external" href="https://python-advanced.quantecon.org/hs_invertibility_example.html">quantecon lecture</a> contains another example of a shock-invertibility issue that is endemic
 to the LQ permanent income or consumption smoothing model.</p>
 <p>The technical issue discussed there is ultimately the source of the shock-invertibility issues discussed by
 Eric Leeper, Todd Walker, and Susan Yang <a class="bibtex reference internal" href="zreferences.html#leeper-walker-yang" id="id2">[LWY13]</a> in their  analysis of <strong>fiscal foresight</strong>.</p>

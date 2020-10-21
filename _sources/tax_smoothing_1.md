@@ -54,8 +54,8 @@ particular direction.
 
 This lecture has two sequels that offer further extensions of the Barro model
 
-1. {doc}`How to Pay for a War: Part 2 <tax_smoothing_2>`
-1. {doc}`How to Pay for a War: Part 3 <tax_smoothing_3>`
+1. [How to Pay for a War: Part 2](https://python-advanced.quantecon.org/tax_smoothing_2.html)
+2. [How to Pay for a War: Part 3](https://python-advanced.quantecon.org/tax_smoothing_3.html)
 
 The extensions are modified versions of
 his 1979 model later suggested by Barro (1999 {cite}`barro1999determinants`, 2003 {cite}`barro2003religion`).
