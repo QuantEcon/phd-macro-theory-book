@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-# Tom's Homemade Macro Theory Book
+# PhD Macro with Python
 
 This website presents a set of advanced lectures on quantitative economic modeling, designed and written by
 [Thomas J. Sargent](http://www.tomsargent.com/) and [John Stachurski](http://johnstachurski.net/).
