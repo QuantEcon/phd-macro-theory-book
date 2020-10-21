@@ -3,8 +3,8 @@ author: Thomas J. Sargent & John Stachurski
 logo: _static/qe-logo-large.png
 
 execute:
-  execute_notebooks: "off"
-  timeout: 60
+  execute_notebooks: "cache"
+  timeout: 3600
 #   run_in_temp: true
 
 sphinx:
