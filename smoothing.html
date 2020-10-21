@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4. Consumption Smoothing with Complete and Incomplete Markets &#8212; Tom&#39;s Homemade Macro Theory Book</title>
+    <title>4. Consumption Smoothing with Complete and Incomplete Markets &#8212; PhD Macro with Python</title>
     <link rel="stylesheet" href="_static/quantecon-book-theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
@@ -156,7 +156,7 @@
 
                     <div class="page__header-copy">
 
-                        <p class="page__header-heading"><a href="intro.html">Tom&#39;s Homemade Macro Theory Book</a></p>
+                        <p class="page__header-heading"><a href="intro.html">PhD Macro with Python</a></p>
 
                         <p class="page__header-subheading">Consumption Smoothing with Complete and Incomplete Markets</p>
 
@@ -202,20 +202,20 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already up-to-date: quantecon in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (0.4.8)
-Requirement already satisfied, skipping upgrade: requests in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (2.24.0)
 Requirement already satisfied, skipping upgrade: numba&gt;=0.38 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (0.50.1)
-Requirement already satisfied, skipping upgrade: scipy&gt;=1.0.0 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (1.5.0)
+Requirement already satisfied, skipping upgrade: requests in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (2.24.0)
 Requirement already satisfied, skipping upgrade: sympy in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (1.6.1)
 Requirement already satisfied, skipping upgrade: numpy in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (1.18.5)
-Requirement already satisfied, skipping upgrade: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (1.25.9)
-Requirement already satisfied, skipping upgrade: certifi&gt;=2017.4.17 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (2020.6.20)
-Requirement already satisfied, skipping upgrade: chardet&lt;4,&gt;=3.0.2 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (3.0.4)
-Requirement already satisfied, skipping upgrade: idna&lt;3,&gt;=2.5 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (2.10)
+Requirement already satisfied, skipping upgrade: scipy&gt;=1.0.0 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from quantecon) (1.5.0)
 Requirement already satisfied, skipping upgrade: llvmlite&lt;0.34,&gt;=0.33.0.dev0 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (0.33.0+1.g022ab0f)
 Requirement already satisfied, skipping upgrade: setuptools in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (49.2.0.post20200714)
+Requirement already satisfied, skipping upgrade: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (1.25.9)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied, skipping upgrade: mpmath&gt;=0.19 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from sympy-&gt;quantecon) (1.1.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied, skipping upgrade: certifi&gt;=2017.4.17 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (2020.6.20)
+Requirement already satisfied, skipping upgrade: idna&lt;3,&gt;=2.5 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (2.10)
+Requirement already satisfied, skipping upgrade: chardet&lt;4,&gt;=3.0.2 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from requests-&gt;quantecon) (3.0.4)
+Requirement already satisfied, skipping upgrade: mpmath&gt;=0.19 in /usr/share/miniconda3/envs/qe-lectures/lib/python3.8/site-packages (from sympy-&gt;quantecon) (1.1.0)
 </pre></div>
 </div>
 </div>
@@ -1031,16 +1031,11 @@ to construct tax-smoothing models in the incomplete markets tradition of Barro <
                     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Tom’s Homemade Macro Theory Book
+   PhD Macro with Python
   </a>
  </li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Asset Pricing and Finance I
- </span>
-</p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="markov_asset.html">
    1. Asset Pricing: Finite State Models
@@ -1051,13 +1046,6 @@ to construct tax-smoothing models in the incomplete markets tradition of Barro <
    2. Asset Pricing with Incomplete Markets
   </a>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  LQ Control
- </span>
-</p>
-<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="cons_news.html">
    3. Information and Consumption Smoothing
@@ -1088,13 +1076,6 @@ to construct tax-smoothing models in the incomplete markets tradition of Barro <
    8. How to Pay for a War: Part 1
   </a>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Asset Pricing and Finance II
- </span>
-</p>
-<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="BCG_complete_mkts.html">
    9. Capital Structures in a Complete Markets Economy
@@ -1105,25 +1086,11 @@ to construct tax-smoothing models in the incomplete markets tradition of Barro <
    10. Equilibrium Capital Structures with Incomplete Markets
   </a>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Dynamic Programming Squared
- </span>
-</p>
-<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="dyn_stack.html">
    11. Stackelberg Plans
   </a>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Other
- </span>
-</p>
-<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="troubleshooting.html">
    12. Troubleshooting
