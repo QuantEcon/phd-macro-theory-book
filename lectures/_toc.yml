@@ -1,0 +1,32 @@
+- file: intro
+  numbered: true
+
+- part: Asset Pricing and Finance I
+  chapters:
+    - file: markov_asset
+    - file: harrison_kreps
+
+- part: LQ Control
+  chapters:
+    - file: cons_news
+    - file: smoothing
+    - file: smoothing_tax
+    - file: robustness
+    - file: markov_jump_lq
+    - file: tax_smoothing_1
+
+- part: Asset Pricing and Finance II
+  chapters:
+    - file: BCG_complete_mkts
+    - file: BCG_incomplete_mkts
+
+- part: Dynamic Programming Squared
+  chapters:
+    - file: dyn_stack
+
+# Placeholder for other pages
+
+- part: Other
+  chapters:
+    - file: troubleshooting
+    - file: zreferences
