@@ -297,11 +297,11 @@ You can think of
   factor $g_t = g(X_t)$ for the endowment.
 * $\ln g_t = \ln (d_{t+1} / d_t)$ is the growth rate of dividends.
 
-(For a refresher on notation and theory for finite Markov chains see {doc}`this lecture <finite_markov>`)
+(For a refresher on notation and theory for finite Markov chains see [this lecture](https://python.quantecon.org/finite_markov.html))
 
 The next figure shows a simulation, where
 
-* $\{X_t\}$ evolves as a discretized AR1 process produced using {ref}`Tauchen's method <mc_ex3>`.
+* $\{X_t\}$ evolves as a discretized AR1 process produced using [Tauchen's method](https://python.quantecon.org/finite_markov.html#Exercise-3).
 * $g_t = \exp(X_t)$, so that $\ln g_t = X_t$ is the growth rate.
 
 ```{code-cell} ipython
@@ -373,7 +373,7 @@ Here
 
 When does {eq}`vcumrn` have a unique solution?
 
-From the {ref}`Neumann series lemma <la_neumann>` and Gelfand's formula, this will be the case if $\beta K$ has spectral radius strictly less than one.
+From the [Neumann series lemma](https://python.quantecon.org/linear_algebra.html#Neumann%E2%80%99s-Theorem) and Gelfand's formula, this will be the case if $\beta K$ has spectral radius strictly less than one.
 
 In other words, we require that the eigenvalues of $K$  be strictly less than $\beta^{-1}$ in modulus.
 
@@ -389,7 +389,7 @@ v = (I - \beta K)^{-1} \beta K{\mathbb 1}
 
 Let's calculate and plot the price-dividend ratio at a set of parameters.
 
-As before, we'll generate $\{X_t\}$  as a {ref}`discretized AR1 process <mc_ex3>` and set $g_t = \exp(X_t)$.
+As before, we'll generate $\{X_t\}$  as a [discretized AR1 process](https://python.quantecon.org/finite_markov.html#Exercise-3) and set $g_t = \exp(X_t)$.
 
 Here's the code, including a test of the spectral radius condition
 
@@ -626,7 +626,7 @@ discount factor, lowering the weight placed on future returns.
 
 In the special case $\gamma =1$, we have $J = P$.
 
-Recalling that $P^i {\mathbb 1} = {\mathbb 1}$ for all $i$ and applying {ref}`Neumann's geometric series lemma <la_neumann>`, we are led to
+Recalling that $P^i {\mathbb 1} = {\mathbb 1}$ for all $i$ and applying [Neumann's geometric series lemma](https://python.quantecon.org/linear_algebra.html#Neumann%E2%80%99s-Theorem), we are led to
 
 $$
 v = \beta(I-\beta P)^{-1} {\mathbb 1}
