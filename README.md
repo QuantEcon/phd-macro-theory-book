@@ -1,5 +1,5 @@
-# homemade-macro-theory-book
+# phd-macro-theory-book
 
-Tom's Homemade Macro Theory Book
+Tom's PhD Macro Theory Book
 
-https://quantecon.github.io/homemade-macro-theory-book/
+https://quantecon.github.io/phd-macro-theory-book/
