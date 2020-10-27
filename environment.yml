@@ -1,4 +1,4 @@
-name: qe-lectures
+name: phd-macro-theory-book
 channels:
   - default
   - conda-forge
