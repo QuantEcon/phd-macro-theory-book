@@ -38,7 +38,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="11. Stackelberg Plans" href="dyn_stack.html" />
-    <link rel="prev" title="9. Capital Structures in a Complete Markets Economy" href="BCG_complete_mkts.html" />
+    <link rel="prev" title="9. Irrelevance of Capital Structures with Complete Markets" href="BCG_complete_mkts.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="Thomas J. Sargent &amp; John Stachurski" />
@@ -98,19 +98,7 @@
                                 </li>
                                 
                                 <li class="nav-item toc-entry toc-h3">
-                                    <a href="#shock-distribution" class="nav-link">Shock distribution:</a>
-                                </li>
-                                
-                                <li class="nav-item toc-entry toc-h3">
-                                    <a href="#preferences" class="nav-link">Preferences:</a>
-                                </li>
-                                
-                                <li class="nav-item toc-entry toc-h3">
                                     <a href="#ownership" class="nav-link">Ownership</a>
-                                </li>
-                                
-                                <li class="nav-item toc-entry toc-h3">
-                                    <a href="#risk-sharing-motives" class="nav-link">Risk-sharing motives</a>
                                 </li>
                                 
                                 <li class="nav-item toc-entry toc-h3">
@@ -119,6 +107,18 @@
                                 
                                 <li class="nav-item toc-entry toc-h3">
                                     <a href="#feasibility" class="nav-link">Feasibility:</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#shock-distribution" class="nav-link">Shock distribution:</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#preferences" class="nav-link">Preferences:</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#risk-sharing-motives" class="nav-link">Risk-sharing motives</a>
                                 </li>
                                 
                                 <li class="nav-item toc-entry toc-h3">
@@ -136,7 +136,11 @@
                                 </li>
                                 
                                 <li class="nav-item toc-entry toc-h3">
-                                    <a href="#firm" class="nav-link">Firm</a><ul class="nav section-nav flex-column">
+                                    <a href="#pricing-functions" class="nav-link">Pricing functions</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#firm-s-problem" class="nav-link">Firm’s problem</a><ul class="nav section-nav flex-column">
                                         
                                 <li class="nav-item toc-entry toc-h4">
                                     <a href="#firms-optimization-problem" class="nav-link">Firm’s optimization problem</a>
@@ -544,16 +548,16 @@ Please update conda by running
 <h2><a class="toc-backref" href="#id6"><span class="section-number">10.1. </span>Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This is an extension of an earlier lecture <a class="reference internal" href="BCG_complete_mkts.html"><span class="doc">BCG_complete_mkts</span></a> about a <strong>complete markets</strong>
 model.</p>
-<p>In contrast to that lecture, this lecture  describes an instance of a model authored by Bisin, Clementi, and Gottardi <a class="bibtex reference internal" href="zreferences.html#bcg-2018" id="id1">[BCG18]</a>
+<p>In contrast to that lecture, this one  describes an instance of a model authored by Bisin, Clementi, and Gottardi <a class="bibtex reference internal" href="zreferences.html#bcg-2018" id="id1">[BCG18]</a>
 in which financial markets are <strong>incomplete</strong>.</p>
 <p>Instead of being able to trade equities and a full set of one-period
-Arrow securities as they can in the earlier lecture <a class="reference internal" href="BCG_complete_mkts.html"><span class="doc">BCG_complete_mkts</span></a>, now consumers and firms trade only equity and a bond.</p>
-<p>It is useful to watch how outcomes differ  as  consequences of  trading opportunities differing in the two settings.</p>
+Arrow securities as they can in <a class="reference internal" href="BCG_complete_mkts.html"><span class="doc">BCG_complete_mkts</span></a>, here consumers and firms trade only equity and a bond.</p>
+<p>It is useful to watch how outcomes differ  in the two settings.</p>
 <p>In the complete markets economy in <a class="reference internal" href="BCG_complete_mkts.html"><span class="doc">BCG_complete_mkts</span></a></p>
 <p><a class="bibtex reference internal" href="zreferences.html#modigliani-miller-1958" id="id2">[MM58]</a>- there is a unique  stochastic discount factor that prices all assets</p>
 <ul class="simple">
 <li><p>consumers’ portfolio choices are indeterminate</p></li>
-<li><p>firms’ financial structures are indeterminate, so the model embodies an instance of a Modigliani-Miller theorem</p></li>
+<li><p>firms’ financial structures are indeterminate, so the model embodies an instance of a Modigliani-Miller irrelevance theorem</p></li>
 <li><p>the aggregate of all firms’ financial structures are indeterminate, a consequence of there being redundant assets</p></li>
 </ul>
 <p>In the incomplete markets economy studied here</p>
@@ -561,13 +565,13 @@ Arrow securities as they can in the earlier lecture <a class="reference internal
 <ul class="simple">
 <li><p>different stochastic discount factors price different assets</p></li>
 <li><p>consumers’ portfolio choices are determinate</p></li>
-<li><p>while <strong>individual</strong> firms’ financial structures are indeterminate, thus conforming to an aspect of a Modigliani-Miller theorem,
+<li><p>while <strong>individual</strong> firms’ financial structures are indeterminate, thus conforming to part of a Modigliani-Miller theorem,
 , the <strong>aggregate</strong>  of all firms’ financial structures <strong>is</strong> determinate.</p></li>
 </ul>
 <p>A  <code class="docutils literal notranslate"><span class="pre">Big</span> <span class="pre">K,</span> <span class="pre">little</span> <span class="pre">k</span></code> analysis played an important role in the  previous lecture <a class="reference internal" href="BCG_complete_mkts.html"><span class="doc">BCG_complete_mkts</span></a>.</p>
-<p>A more subtle version of a <code class="docutils literal notranslate"><span class="pre">Big</span> <span class="pre">K,</span> <span class="pre">little</span> <span class="pre">k</span></code>  will be featured in our  presentation and analysis of  BCG incomplete markets environment.</p>
-<p>We use it to convey the heart of what BCG call a <strong>rational conjectures</strong> equilibrium in which the <code class="docutils literal notranslate"><span class="pre">rational</span> <span class="pre">conjectures</span></code> are about
-equilibrium pricing functions in regions of the state space that an average consumer or firm does not choose to inhabit in equilibrium.</p>
+<p>A more subtle version of a <code class="docutils literal notranslate"><span class="pre">Big</span> <span class="pre">K,</span> <span class="pre">little</span> <span class="pre">k</span></code>   features in  the   BCG incomplete markets environment here.</p>
+<p>We use it to convey the heart of what BCG call a <strong>rational conjectures</strong> equilibrium in which conjectures are about
+equilibrium pricing functions in regions of the state space that  in equilibrium an average consumer or firm does not visit.</p>
 <div class="section" id="setup">
 <h3><span class="section-number">10.1.1. </span>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
 <p>We adopt specifications of preferences and technologies used by Bisin,
@@ -584,8 +588,39 @@ period <span class="math notranslate nohighlight">\(1\)</span> from investing <s
 consumption good for agents <span class="math notranslate nohighlight">\(i =1\)</span> and <span class="math notranslate nohighlight">\(i=2\)</span>.</p></li>
 </ul>
 </div>
+<div class="section" id="ownership">
+<h3><span class="section-number">10.1.2. </span>Ownership<a class="headerlink" href="#ownership" title="Permalink to this headline">¶</a></h3>
+<p>A consumer of type <span class="math notranslate nohighlight">\(i\)</span> is endowed with <span class="math notranslate nohighlight">\(w_0^i\)</span> units of the
+time <span class="math notranslate nohighlight">\(0\)</span> good and <span class="math notranslate nohighlight">\(w_1^i(\epsilon)\)</span> of the time <span class="math notranslate nohighlight">\(1\)</span>
+good when the random variable takes value <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
+<p>At the start of period <span class="math notranslate nohighlight">\(0\)</span>, a consumer of type <span class="math notranslate nohighlight">\(i\)</span> also owns
+<span class="math notranslate nohighlight">\(\theta^i_0\)</span> shares of a representative firm.</p>
+</div>
+<div class="section" id="aggregate-endowments">
+<h3><span class="section-number">10.1.3. </span>Aggregate Endowments<a class="headerlink" href="#aggregate-endowments" title="Permalink to this headline">¶</a></h3>
+<p>Economy-wide endowments in periods <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{aligned}
+w_0 &amp; = w_0^1 + w_0^2 \cr
+w_1(\epsilon) &amp; =  w_1^1(\epsilon) + w_1^2(\epsilon) \textrm{ in state }\epsilon
+\end{aligned}
+\]</div>
+</div>
+<div class="section" id="feasibility">
+<h3><span class="section-number">10.1.4. </span>Feasibility:<a class="headerlink" href="#feasibility" title="Permalink to this headline">¶</a></h3>
+<p>Where <span class="math notranslate nohighlight">\(\alpha \in (0,1)\)</span> and <span class="math notranslate nohighlight">\(A &gt;0\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\begin{aligned}
+ c_0^1 + c_0^2 &amp; = w_0^1 + w_0^2 - k \cr
+ c_1^1(\epsilon) + c_1^2(\epsilon) &amp; =  w_1^1(\epsilon) + w_1^2(\epsilon) + e^\epsilon f(k), \quad k \geq 0
+\end{aligned}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(f(k) = A k^\alpha, A &gt;0, \alpha \in (0,1)\)</span>.</p>
+</div>
 <div class="section" id="shock-distribution">
-<h3><span class="section-number">10.1.2. </span>Shock distribution:<a class="headerlink" href="#shock-distribution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.5. </span>Shock distribution:<a class="headerlink" href="#shock-distribution" title="Permalink to this headline">¶</a></h3>
 <p>Sometimes we assume that</p>
 <div class="math notranslate nohighlight">
 \[
@@ -596,7 +631,7 @@ instead assume that <span class="math notranslate nohighlight">\(g(\cdot)\)</spa
 serves as a discrete approximation to a standardized normal density.</p>
 </div>
 <div class="section" id="preferences">
-<h3><span class="section-number">10.1.3. </span>Preferences:<a class="headerlink" href="#preferences" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.1.6. </span>Preferences:<a class="headerlink" href="#preferences" title="Permalink to this headline">¶</a></h3>
 <p>A consumer of type <span class="math notranslate nohighlight">\(i\)</span> orders period <span class="math notranslate nohighlight">\(0\)</span> consumption
 <span class="math notranslate nohighlight">\(c_0^i\)</span> and state <span class="math notranslate nohighlight">\(\epsilon\)</span>-period <span class="math notranslate nohighlight">\(1\)</span> consumption
 <span class="math notranslate nohighlight">\(c^i(\epsilon)\)</span> by</p>
@@ -613,57 +648,26 @@ u(c) = \begin{cases}
 \end{cases}
 \end{split}\]</div>
 </div>
-<div class="section" id="ownership">
-<h3><span class="section-number">10.1.4. </span>Ownership<a class="headerlink" href="#ownership" title="Permalink to this headline">¶</a></h3>
-<p>A consumer of type <span class="math notranslate nohighlight">\(i\)</span> is endowed with <span class="math notranslate nohighlight">\(w_0^i\)</span> units of the
-time <span class="math notranslate nohighlight">\(0\)</span> good and <span class="math notranslate nohighlight">\(w_1^i(\epsilon)\)</span> of the time <span class="math notranslate nohighlight">\(1\)</span>
-consumption good when the random variable takes value <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
-<p>At the start of period <span class="math notranslate nohighlight">\(0\)</span>, a consumer of type <span class="math notranslate nohighlight">\(i\)</span> also owns
-<span class="math notranslate nohighlight">\(\theta^i_0\)</span> shares of a representative firm.</p>
-</div>
 <div class="section" id="risk-sharing-motives">
-<h3><span class="section-number">10.1.5. </span>Risk-sharing motives<a class="headerlink" href="#risk-sharing-motives" title="Permalink to this headline">¶</a></h3>
-<p>The two types of agents’ period <span class="math notranslate nohighlight">\(1\)</span> endowments are correlated with
-the physical return on capital in different ways.</p>
+<h3><span class="section-number">10.1.7. </span>Risk-sharing motives<a class="headerlink" href="#risk-sharing-motives" title="Permalink to this headline">¶</a></h3>
+<p>The two types of agents’ period <span class="math notranslate nohighlight">\(1\)</span> endowments have different correlations with
+the physical return on capital.</p>
 <p>Endowment differences give agents incentives to trade risks that in the
 complete market version of the model showed up in their demands for
-equity and their demands and supplies of one-period Arrow securities.</p>
+equity and in their demands and supplies of one-period Arrow securities.</p>
 <p>In the incomplete-markets setting under study here, these differences
 show up in differences in the two types of consumers’ demands for a
 typical firm’s bonds and equity, the only two assets that agents can now
 trade.</p>
 </div>
-<div class="section" id="aggregate-endowments">
-<h3><span class="section-number">10.1.6. </span>Aggregate Endowments<a class="headerlink" href="#aggregate-endowments" title="Permalink to this headline">¶</a></h3>
-<p>Economy-wide endowments in periods <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span> are</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{aligned}
-w_0 &amp; = w_0^1 + w_0^2 \cr
-w_1(\epsilon) &amp; =  w_1^1(\epsilon) + w_1^2(\epsilon) \textrm{ in state }\epsilon
-\end{aligned}
-\]</div>
-</div>
-<div class="section" id="feasibility">
-<h3><span class="section-number">10.1.7. </span>Feasibility:<a class="headerlink" href="#feasibility" title="Permalink to this headline">¶</a></h3>
-<p>Where <span class="math notranslate nohighlight">\(\alpha \in (0,1)\)</span> and <span class="math notranslate nohighlight">\(A &gt;0\)</span></p>
-<div class="math notranslate nohighlight">
-\[
-\begin{aligned}
- c_0^1 + c_0^2 &amp; = w_0^1 + w_0^2 - k \cr
- c_1^1(\epsilon) + c_1^2(\epsilon) &amp; =  w_1^1(\epsilon) + w_1^2(\epsilon) + e^\epsilon f(k), \quad k \geq 0
-\end{aligned}
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(f(k) = A k^\alpha, A &gt;0, \alpha \in (0,1)\)</span>.</p>
-</div>
 <div class="section" id="measures-of-agents-and-firms">
 <h3><span class="section-number">10.1.8. </span>Measures of agents and firms<a class="headerlink" href="#measures-of-agents-and-firms" title="Permalink to this headline">¶</a></h3>
 <p>As in the companion lecture <a class="reference internal" href="BCG_complete_mkts.html"><span class="doc">BCG_complete_mkts</span></a> that studies a complete markets version of
-the model, we follow BCG in assuming that there are equal unit measures of</p>
+the model, we follow BCG in assuming that there are unit measures of</p>
 <ul class="simple">
 <li><p>consumers of type <span class="math notranslate nohighlight">\(i=1\)</span></p></li>
 <li><p>consumers of type <span class="math notranslate nohighlight">\(i=2\)</span></p></li>
-<li><p>firms with access to the production technology that converts
+<li><p>firms with access to a production technology that converts
 <span class="math notranslate nohighlight">\(k\)</span> units of time <span class="math notranslate nohighlight">\(0\)</span> good into
 <span class="math notranslate nohighlight">\(A k^\alpha e^\epsilon\)</span> units of the time <span class="math notranslate nohighlight">\(1\)</span> good in
 random state <span class="math notranslate nohighlight">\(\epsilon\)</span></p></li>
@@ -692,7 +696,7 @@ and issue <span class="math notranslate nohighlight">\(b(\zeta)\)</span> bonds.<
 K = \int_0^1 k(\zeta) d \, \zeta, \quad B = \int_0^1 b(\zeta) d \, \zeta
 \]</div>
 <p>The assumption that there are equal measures of our three types of
-agents plays an important role making each individual agent into a
+agents justifies our assumption that  each individual agent is a
 powerless <strong>price taker</strong>:</p>
 <ul class="simple">
 <li><p>an individual consumer chooses its own (infinitesimal) part
@@ -705,7 +709,7 @@ objects <span class="math notranslate nohighlight">\(K\)</span>, <span class="ma
 </ul>
 <p>The assumption about measures of agents is a powerful device for making
 a host of competitive agents take as given the equilibrium prices that
-turn out to be determined by the decisions of hosts of agents just like
+turn out to be determined by the decisions of hosts of agents who are just like
 them.</p>
 <p>We call an equilibrium <strong>symmetric</strong> if</p>
 <ul class="simple">
@@ -721,20 +725,20 @@ equilibria.</p>
 </div>
 <div class="section" id="asset-markets">
 <h2><a class="toc-backref" href="#id7"><span class="section-number">10.2. </span>Asset Markets</a><a class="headerlink" href="#asset-markets" title="Permalink to this headline">¶</a></h2>
-<p>Markets are incomplete: only equities and bonds issued by representative
+<p>Markets are incomplete: {em ex cathedra} we the model builders declare that only equities and bonds issued by representative
 firms can be traded.</p>
 <p>Let <span class="math notranslate nohighlight">\(\theta^i\)</span> and <span class="math notranslate nohighlight">\(\xi^i\)</span> be a consumer of type
 <span class="math notranslate nohighlight">\(i\)</span>’s post-trade holdings of equity and bonds, respectively.</p>
 <p>The firm issues bonds promising to pay <span class="math notranslate nohighlight">\(b\)</span> units of consumption at
 time <span class="math notranslate nohighlight">\(t=1\)</span> and purchases <span class="math notranslate nohighlight">\(k\)</span> units of physical capital at
 time <span class="math notranslate nohighlight">\(t=0\)</span>.</p>
-<p>When <span class="math notranslate nohighlight">\(e^\epsilon A k^\alpha &lt; b\)</span>, the firm defaults and output is
+<p>When <span class="math notranslate nohighlight">\(e^\epsilon A k^\alpha &lt; b\)</span> at time <span class="math notranslate nohighlight">\(1\)</span>, the firm defaults and its output is
 divided equally among bondholders.</p>
 <p>Evidently, when the productivity shock
 <span class="math notranslate nohighlight">\(\epsilon &lt; \epsilon^* = \log \left(\frac{b}{ Ak^\alpha}\right)\)</span>,
 the firm defaults on its debt</p>
 <p>Payoffs to equity and debt at date 1 as functions of the productivity
-shock <span class="math notranslate nohighlight">\(\epsilon\)</span> are</p>
+shock <span class="math notranslate nohighlight">\(\epsilon\)</span> are thus</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -744,10 +748,7 @@ d^b(k,b;\epsilon) &amp;= \min \left\{ \frac{e^\epsilon  A k^\alpha}{b}, 1 \right
 \end{split}\]</div>
 <p>The firm faces a bond price function <span class="math notranslate nohighlight">\(p(k,b)\)</span> when it issues
 <span class="math notranslate nohighlight">\(b\)</span> bonds and purchases <span class="math notranslate nohighlight">\(k\)</span> units of physical capital.</p>
-<p>The firm regards the bond price function <span class="math notranslate nohighlight">\(p(k,b)\)</span> as exogenous in
-the sense that it is not affected by its own choices of <span class="math notranslate nohighlight">\(k\)</span> and
-<span class="math notranslate nohighlight">\(b\)</span>.</p>
-<p>The firm’s equity is worth <span class="math notranslate nohighlight">\(q(k,b)\)</span> when it issues <span class="math notranslate nohighlight">\(b\)</span> bonds
+<p>A firm’s equity is worth <span class="math notranslate nohighlight">\(q(k,b)\)</span> when it issues <span class="math notranslate nohighlight">\(b\)</span> bonds
 and purchases <span class="math notranslate nohighlight">\(k\)</span> units of physical capital.</p>
 <p>A firm regards the equity-pricing function <span class="math notranslate nohighlight">\(q(k,b)\)</span> and the bond
 pricing function <span class="math notranslate nohighlight">\(p(k,b)\)</span> as exogenous in the sense that they are
@@ -759,15 +760,15 @@ both scalars.</p>
 <h3><span class="section-number">10.2.1. </span>Consumers<a class="headerlink" href="#consumers" title="Permalink to this headline">¶</a></h3>
 <p>Each consumer of type <span class="math notranslate nohighlight">\(i\)</span> is endowed with <span class="math notranslate nohighlight">\(w_0^i\)</span> of the
 time <span class="math notranslate nohighlight">\(0\)</span> consumption good, <span class="math notranslate nohighlight">\(w_1^i(\epsilon)\)</span> of the time
-<span class="math notranslate nohighlight">\(1\)</span>, state <span class="math notranslate nohighlight">\(\epsilon\)</span> consumption good, and owns a fraction
+<span class="math notranslate nohighlight">\(1\)</span>, state <span class="math notranslate nohighlight">\(\epsilon\)</span> consumption good  and also owns a fraction
 <span class="math notranslate nohighlight">\(\theta^i_0 \in (0,1)\)</span> of the initial value of a representative
 firm, where <span class="math notranslate nohighlight">\(\theta^1_0 + \theta^2_0 = 1\)</span>.</p>
 <p>The initial value of a representative firm is <span class="math notranslate nohighlight">\(V\)</span> (an object to be
 determined in a rational expectations equilibrium).</p>
-<p>Household <span class="math notranslate nohighlight">\(i\)</span> buys <span class="math notranslate nohighlight">\(\theta^i\)</span> shares of equity and bonds
+<p>Household <span class="math notranslate nohighlight">\(i\)</span> buys <span class="math notranslate nohighlight">\(\theta^i\)</span> shares of equity and buys bonds
 worth <span class="math notranslate nohighlight">\(\check p \xi^i\)</span> where <span class="math notranslate nohighlight">\(\check p\)</span> is the bond price.</p>
 <p>Being a price-taker, the household takes <span class="math notranslate nohighlight">\(V\)</span>,
-<span class="math notranslate nohighlight">\(\check q = q(K,B)\)</span>, <span class="math notranslate nohighlight">\(\check p = p(K,B)\)</span>, and <span class="math notranslate nohighlight">\(K, B\)</span>
+<span class="math notranslate nohighlight">\(\check q\)</span>, <span class="math notranslate nohighlight">\(\check p \)</span>
 as given.</p>
 <p>Household <span class="math notranslate nohighlight">\(i\)</span>’s optimization problem is</p>
 <div class="math notranslate nohighlight">
@@ -780,8 +781,9 @@ as given.</p>
 &amp; \theta^i \geq 0, \xi^i \geq 0.
 \end{aligned}
 \end{split}\]</div>
-<p>The last two inequalities impose that the household cannot short sell
+<p>The last two inequalities impose that the household cannot short sell either
 equity or bonds.</p>
+<p>In a rational expectations equilibrium, :math:<code class="docutils literal notranslate"> <span class="pre">check</span> <span class="pre">q</span> <span class="pre">=</span> <span class="pre">q(K,B)</span></code> and <span class="math notranslate nohighlight">\(\check p = p(K,B)\)</span></p>
 <p>Form household <span class="math notranslate nohighlight">\(i\)</span>’s Lagrangian:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -811,8 +813,8 @@ conditions to become:</p>
 \check p \geq \beta \int \frac{u^\prime(c^i_1(\epsilon))}{u^\prime(c^i_0)} d^b(K,B;\epsilon) g(\epsilon) \ d\epsilon \quad (= \ \ \text{if} \ \ b^i&gt;0)\\
 \end{aligned}
 \end{split}\]</div>
-<p>These inequalities imply that equilibrium consumption allocations and
-prices in a symmetric rational expectations equilibrium will satisfy</p>
+<p>These inequalities imply that in a symmetric rational expectations equilibrium  consumption allocations and
+prices  satisfy</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -821,8 +823,8 @@ prices in a symmetric rational expectations equilibrium will satisfy</p>
 \end{aligned}
 \end{split}\]</div>
 </div>
-<div class="section" id="firm">
-<h3><span class="section-number">10.2.2. </span>Firm<a class="headerlink" href="#firm" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="pricing-functions">
+<h3><span class="section-number">10.2.2. </span>Pricing functions<a class="headerlink" href="#pricing-functions" title="Permalink to this headline">¶</a></h3>
 <p>When individual firms solve their optimization problems, they take big
 <span class="math notranslate nohighlight">\(C^i\)</span>’s as fixed objects that they don’t influence.</p>
 <p>A representative firm faces a price function <span class="math notranslate nohighlight">\(q(k,b)\)</span> for its
@@ -841,32 +843,35 @@ two equations that define equilibrium pricing functions.</p>
 <span class="math notranslate nohighlight">\(K, B\)</span> of capital <span class="math notranslate nohighlight">\(k\)</span> and debt <span class="math notranslate nohighlight">\(b\)</span>, but also for any
 <strong>out-of-equilibrium</strong> pairs <span class="math notranslate nohighlight">\((k, b) \neq (K, B)\)</span>.</p>
 <p>The firm is assumed to know both price functions.</p>
+<p>This means that the firm understands that its choice of <span class="math notranslate nohighlight">\(k,b\)</span> influences how markets prices is equity and debt.</p>
 <p>The package of assumptions just described is sometimes called the
-assumption of <strong>rational conjectures</strong> (about the price functions). BCG
-give credit to Makowski for emphasizing and clarifying how this approach
-is an element of rational expectations models.</p>
+assumption of <strong>rational conjectures</strong> (about the price functions).</p>
+<p>BCG give credit to Makowski for emphasizing and clarifying how it is a component of   rational expectations equilibria.</p>
+</div>
+<div class="section" id="firm-s-problem">
+<h3><span class="section-number">10.2.3. </span>Firm’s problem<a class="headerlink" href="#firm-s-problem" title="Permalink to this headline">¶</a></h3>
 <p>The firm chooses capital <span class="math notranslate nohighlight">\(k\)</span> and debt <span class="math notranslate nohighlight">\(b\)</span> to maximize its
 market value:</p>
 <div class="math notranslate nohighlight">
 \[
 V \equiv \max_{k,b} -k + q(k,b) + p(k,b) b
 \]</div>
-<p><strong>Note:</strong> It will turn out that in equilibrium consumers of both types
-<em>want</em> the firm to maximize its value.</p>
+<p>Attributing value maximization to the firm is a good idea because in equilibrium consumers of both types
+<em>want</em> a firm to maximize its value.</p>
 <p>In the special cases studied here</p>
 <ul class="simple">
-<li><p>consumers of types <span class="math notranslate nohighlight">\(i=1,2\)</span> both hold equity</p></li>
-<li><p>only consumers of type <span class="math notranslate nohighlight">\(i=2\)</span> hold debt; holds of type
+<li><p>consumers of both  types <span class="math notranslate nohighlight">\(i=1,2\)</span> hold equity</p></li>
+<li><p>only consumers of type <span class="math notranslate nohighlight">\(i=2\)</span> hold debt; consumers of type
 <span class="math notranslate nohighlight">\(i=1\)</span> hold none.</p></li>
 </ul>
 <p>These outcomes occur because we follow BCG and set parameters so that a
 type 2 consumer’s stochastic endowment of the consumption good in period
 <span class="math notranslate nohighlight">\(1\)</span> is more correlated with the firm’s output than is a type 1
 consumer’s.</p>
-<p>This gives consumers of type <span class="math notranslate nohighlight">\(2\)</span> a motive to hedge second period
-endowment risk by holding some bonds (these consumers also choose to
+<p>This gives consumers of type <span class="math notranslate nohighlight">\(2\)</span> a motive to hedge their second period
+endowment risk by holding bonds (they also choose to
 hold some equity).</p>
-<p>These outcomes mean that in our setting the pricing functions end up
+<p>These outcomes mean that the pricing functions end up
 satisfying</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -887,7 +892,7 @@ p(k,b) &amp;= \beta \int^{\epsilon^*}_{-\infty} \frac{u^\prime(C^2_1(\epsilon))}
 \end{aligned}
 \end{split}\]</div>
 <div class="section" id="firms-optimization-problem">
-<h4><span class="section-number">10.2.2.1. </span>Firm’s optimization problem<a class="headerlink" href="#firms-optimization-problem" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">10.2.3.1. </span>Firm’s optimization problem<a class="headerlink" href="#firms-optimization-problem" title="Permalink to this headline">¶</a></h4>
 <p>The firm’s optimization problem is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -921,14 +926,14 @@ the following derivatives:</p>
 \[
 \frac{\partial p(k,b)}{\partial b} = - \beta \frac{A k^\alpha}{b^2} \int_{-\infty}^{\epsilon^*}  \frac{u'(C_1^2(\epsilon))}{u'(C_0^2)} e^\epsilon  g(\epsilon) d \epsilon
 \]</div>
-<p><strong>Special case:</strong> We confine ourselves to a special case in which both
+<p><strong>Special case:</strong> We confine ourselves to a special case in which both types of
 agents hold positive equities so that
 <span class="math notranslate nohighlight">\(\frac{\partial q(k,b)}{\partial k}\)</span> and
 <span class="math notranslate nohighlight">\(\frac{\partial q(k,b)}{\partial b}\)</span> are related to rates of
 intertemporal substitution for both agents.</p>
 <p>Substituting these partial derivatives into the above first-order
-conditions for <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, respectively, we obtain the
-following forms of those first order conditions:</p>
+conditions for <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, respectively, we obtain the
+following versions of those first order conditions:</p>
 <div class="math notranslate nohighlight" id="equation-eqn1">
 <span class="eqno">(10.1)<a class="headerlink" href="#equation-eqn1" title="Permalink to this equation">¶</a></span>\[k: \quad -1 + \beta \alpha A k^{\alpha -1} \int_{-\infty}^\infty \frac{u'(C_1^2(\epsilon))}{u'(C_0^2)} e^\epsilon  g(\epsilon) d \epsilon = 0\]</div>
 <div class="math notranslate nohighlight" id="equation-eqn2">
@@ -949,7 +954,7 @@ equilibrium are correct, that is equal to the market prices</em> <span class="ma
 the rationality of the conjecture coincides with the agents’ Euler
 equations.</em></p>
 <p>Here BCG are describing how they go about verifying that when they set
-little <span class="math notranslate nohighlight">\(k\)</span>, little <span class="math notranslate nohighlight">\(\xi\)</span> from the firm’s first-order
+little <span class="math notranslate nohighlight">\(k\)</span>, little <span class="math notranslate nohighlight">\(b\)</span> from the firm’s first-order
 conditions equal to the big <span class="math notranslate nohighlight">\(K\)</span>, big <span class="math notranslate nohighlight">\(B\)</span> at the big
 <span class="math notranslate nohighlight">\(C\)</span>’s that appear in the pricing functions, then</p>
 <ul class="simple">
@@ -963,9 +968,8 @@ satisfied.</p></li>
 </div>
 <div class="section" id="pseudo-code">
 <h2><a class="toc-backref" href="#id9"><span class="section-number">10.4. </span>Pseudo Code</a><a class="headerlink" href="#pseudo-code" title="Permalink to this headline">¶</a></h2>
-<p>Before displaying our Python code for solving a BCG incomplete markets,
-we’ll sketch some pseudo code that displays the logical flow of our
-Python code.</p>
+<p>Before displaying our Python code for computing a BCG incomplete markets equilibrium,
+we’ll sketch some pseudo code that displays its logical flow.</p>
 <p>Here goes:</p>
 <ol>
 <li><p>Set upper and lower bounds for firm value as <span class="math notranslate nohighlight">\(V_h\)</span> and
@@ -981,15 +985,13 @@ effect temporarily treating them as Big <span class="math notranslate nohighligh
 this step 6 little k, b are frozen at guessed at value of K, B.)
 Fixing the values of <span class="math notranslate nohighlight">\(V\)</span>, <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(k\)</span>, compute
 optimal choices of consumption <span class="math notranslate nohighlight">\(c^i\)</span> with households’ FOCs.
-Assume only agent 2 holds debt: <span class="math notranslate nohighlight">\(\xi^2 = b\)</span>, and both agents
-hold equity: <span class="math notranslate nohighlight">\(0 &lt;\theta^i &lt; 1\)</span> for <span class="math notranslate nohighlight">\(i=1,2\)</span>.</p>
-<ol>
-<li><p>Set high and low bounds for equity holdings for agent 1 as
-<span class="math notranslate nohighlight">\(\theta^1_h\)</span> and <span class="math notranslate nohighlight">\(\theta^1_l\)</span>. Guess
+Assume that only agent 2 holds debt: <span class="math notranslate nohighlight">\(\xi^2 = b\)</span> and that both agents
+hold equity: <span class="math notranslate nohighlight">\(0 &lt;\theta^i &lt; 1\)</span> for <span class="math notranslate nohighlight">\(i=1,2\)</span>.</p></li>
+<li><p>Set high and low bounds for equity holdings for agent 1 as  <span class="math notranslate nohighlight">\(\theta^1_h\)</span> and <span class="math notranslate nohighlight">\(\theta^1_l\)</span>. Guess
 <span class="math notranslate nohighlight">\(\theta^1 = \frac{1}{2}(\theta^1_h + \theta^1_l)\)</span>, and
 <span class="math notranslate nohighlight">\(\theta^2 = 1 - \theta^1\)</span>. While
 <span class="math notranslate nohighlight">\(|\theta^1_h - \theta^1_l|\)</span> is large:</p>
-<ol>
+<ul>
 <li><p>Compute agent 1’s valuation of the equity claim with a
 fixed-point iteration:</p>
 <p><span class="math notranslate nohighlight">\(q_1 = \beta \int \frac{u^\prime(c^1_1(\epsilon))}{u^\prime(c^1_0)} d^e(k,b;\epsilon) g(\epsilon) \ d\epsilon\)</span></p>
@@ -1018,31 +1020,26 @@ fixed-point iteration:</p>
 otherwise, set <span class="math notranslate nohighlight">\(\theta_h = \theta^1\)</span>.</p></li>
 <li><p>Repeat steps 6Aa through 6Ad until
 <span class="math notranslate nohighlight">\(|\theta^1_h - \theta^1_l|\)</span> is small.</p></li>
-</ol>
+</ul>
 </li>
-<li><p>Set bond price as <span class="math notranslate nohighlight">\(p\)</span> and equity price as
-<span class="math notranslate nohighlight">\(q = \max(q_1,q_2)\)</span>.</p></li>
-<li><p>Compute optimal choices of consumption with prices:</p></li>
-</ol>
-</li>
-</ol>
+<li><p>Set bond price as <span class="math notranslate nohighlight">\(p\)</span> and equity price as  <span class="math notranslate nohighlight">\(q = \max(q_1,q_2)\)</span>.</p></li>
+<li><p>Compute optimal choices of consumption:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{aligned}
-c^1_0 &amp;= w^1_0 + \theta^1_0V - q\theta^1 \\
-c^2_0 &amp;= w^2_0 + \theta^2_0V - q\theta^2 - pb \\
-c^1_1(\epsilon) &amp;= w^1_1(\epsilon) + \theta^1 d^e(k,b;\epsilon) \\
-c^2_1(\epsilon) &amp;= w^2_1(\epsilon) + \theta^2 d^e(k,b;\epsilon) + b
-\end{aligned}
-\end{split}\]</div>
-<ol>
+   \begin{aligned}
+   c^1_0 &amp;= w^1_0 + \theta^1_0V - q\theta^1 \\
+   c^2_0 &amp;= w^2_0 + \theta^2_0V - q\theta^2 - pb \\
+   c^1_1(\epsilon) &amp;= w^1_1(\epsilon) + \theta^1 d^e(k,b;\epsilon) \\
+   c^2_1(\epsilon) &amp;= w^2_1(\epsilon) + \theta^2 d^e(k,b;\epsilon) + b
+   \end{aligned}
+   \end{split}\]</div>
+</li>
 <li><p>(Here we confess to abusing notation again, but now in a different
 way. In step 7, we interpret frozen <span class="math notranslate nohighlight">\(c^i\)</span>s as Big
 <span class="math notranslate nohighlight">\(C^i\)</span>. We do this to solve the firm’s problem.) Fixing the
 values of <span class="math notranslate nohighlight">\(c^i_0\)</span> and <span class="math notranslate nohighlight">\(c^i_1(\epsilon)\)</span>, compute optimal
 choices of capital <span class="math notranslate nohighlight">\(k\)</span> and debt level <span class="math notranslate nohighlight">\(b\)</span> using the
-firm’s FONCs.</p>
-<ol>
+firm’s first order necessary conditions.</p></li>
 <li><p>Compute deviations from the firm’s FONC for capital <span class="math notranslate nohighlight">\(k\)</span> as:</p>
 <p><span class="math notranslate nohighlight">\(kfoc = \beta \alpha A k^{\alpha - 1} \left( \int \frac{u^\prime(c^2_1(\epsilon))}{u^\prime(c^2_0)}  e^\epsilon g(\epsilon) \ d\epsilon \right) - 1\)</span></p>
 <ul class="simple">
@@ -1051,16 +1048,13 @@ firm’s FONCs.</p>
 <li><p>Repeat steps 4 through 7A until <span class="math notranslate nohighlight">\(|k_h-k_l|\)</span> is small.</p></li>
 </ul>
 </li>
-<li><p>Compute deviations from the firm’s FONC for debt level <span class="math notranslate nohighlight">\(b\)</span>
-as:</p>
+<li><p>Compute deviations from the firm’s FONC for debt level <span class="math notranslate nohighlight">\(b\)</span>  as:</p>
 <p><span class="math notranslate nohighlight">\(bfoc = \beta \left[ \int_{\epsilon^*}^\infty \left( \frac{u^\prime(c^1_1(\epsilon))}{u^\prime(c^1_0)} \right) g(\epsilon) \ d\epsilon -  \int_{\epsilon^*}^\infty \left( \frac{u^\prime(c^2_1(\epsilon))}{u^\prime(c^2_0)} \right)  g(\epsilon) \ d\epsilon \right]\)</span></p>
 <ul class="simple">
 <li><p>If <span class="math notranslate nohighlight">\(bfoc &gt; 0\)</span>, Set <span class="math notranslate nohighlight">\(b_h = b\)</span>; otherwise, set
 <span class="math notranslate nohighlight">\(b_l = b\)</span>.</p></li>
 <li><p>Repeat steps 3 through 7B until <span class="math notranslate nohighlight">\(|b_h-b_l|\)</span> is small.</p></li>
 </ul>
-</li>
-</ol>
 </li>
 <li><p>Given prices <span class="math notranslate nohighlight">\(q\)</span> and <span class="math notranslate nohighlight">\(p\)</span> from step 6, and the firm
 choices of <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(b\)</span> from step 7, compute the synthetic
@@ -1072,7 +1066,7 @@ firm value:</p>
 <li><p>Repeat steps 1 through 8 until <span class="math notranslate nohighlight">\(|V_x - V|\)</span> is small.</p></li>
 </ul>
 </li>
-<li><p>At the end, the algorithm returns the equilibrium capital
+<li><p>Ultimately, the algorithm returns  equilibrium capital
 <span class="math notranslate nohighlight">\(k^*\)</span>, debt <span class="math notranslate nohighlight">\(b^*\)</span> and firm value <span class="math notranslate nohighlight">\(V^*\)</span>, as well as
 the following equilibrium values:</p>
 <ul class="simple">
@@ -1715,8 +1709,8 @@ with capital <span class="math notranslate nohighlight">\(k = 0.151\)</span> and
 <p>Let’s verify some things that have to be true if our algorithm has truly
 found an equilibrium.</p>
 <p>Thus, let’s see if the firm is actually maximizing its firm value given
-the equilibrium pricing function <span class="math notranslate nohighlight">\(q(k,b)\)</span> forequity and
-<span class="math notranslate nohighlight">\(p(k,b)\)</span> for the bond.</p>
+the equilibrium pricing function <span class="math notranslate nohighlight">\(q(k,b)\)</span> for equity and
+<span class="math notranslate nohighlight">\(p(k,b)\)</span> for  bonds.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kgrid</span><span class="p">,</span> <span class="n">bgrid</span><span class="p">,</span> <span class="n">Vgrid</span><span class="p">,</span> <span class="n">Qgrid</span><span class="p">,</span> <span class="n">Pgrid</span> <span class="o">=</span> <span class="n">mdl</span><span class="o">.</span><span class="n">eq_valuation</span><span class="p">(</span><span class="n">c10ss</span><span class="p">,</span> <span class="n">c11ss</span><span class="p">,</span> <span class="n">c20ss</span><span class="p">,</span> <span class="n">c21ss</span><span class="p">,</span><span class="n">N</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
@@ -1790,9 +1784,9 @@ is true that</p>
 \[
 (b,k) = (B,K)
 \]</div>
-<p>But an individual firm named <span class="math notranslate nohighlight">\(\xi \in [0,1]\)</span> neither knows nor
+<p>But an individual firm named <span class="math notranslate nohighlight">\(\zet \in [0,1]\)</span> neither knows nor
 cares whether it sets <span class="math notranslate nohighlight">\((b(\zeta),k(\zeta)) = (B,K)\)</span>.</p>
-<p>Indeed the above graph has a ridge of <span class="math notranslate nohighlight">\(b(\xi)\)</span>’s that also
+<p>Indeed the above graph has a ridge of <span class="math notranslate nohighlight">\(b(\zeta)\)</span>’s that also
 maximize the firm’s value so long as it sets <span class="math notranslate nohighlight">\(k(\zeta) = K\)</span>.</p>
 <p>Here is is important that the measure of firms that deviate from setting
 <span class="math notranslate nohighlight">\(b\)</span> at the red dot is very small – measure zero – so that
@@ -1806,13 +1800,13 @@ long as it is atypical of what other firms are doing).</p>
 indeterminate, the <strong>market’s</strong> financial structure is determinant and
 sits at the red dot in the above graph.</p>
 <p>This contrasts sharply with the <em>unqualified</em> Modigliani-Miller theorem
-descibed in the complete markets model in the lecture <a class="reference internal" href="BCG_complete_mkts.html"><span class="doc">BCG_complete_mkts</span></a> . There
-the <strong>market’s</strong> financial structure was indeterminate.</p>
+descibed in the complete markets model in the lecture <a class="reference internal" href="BCG_complete_mkts.html"><span class="doc">BCG_complete_mkts</span></a>.</p>
+<p>There the <strong>market’s</strong> financial structure was indeterminate.</p>
 <p>These things bear some more thought and exploration.</p>
-<p>So we will do some calculations designed to ferret out a sense in which
+<p>So we will do some calculations  to ferret out a sense in which
 the equilibrium <span class="math notranslate nohighlight">\((k,b) = (K,B)\)</span> outcome at the red dot in the
 above graph is <strong>stable</strong>.</p>
-<p>IN particular, we’ll explore the consequences of some choices of
+<p>In particular, we’ll explore the consequences of some choices of
 <span class="math notranslate nohighlight">\(b=B\)</span> that deviate from the red dot and ask whether firm
 <span class="math notranslate nohighlight">\(\zeta\)</span> would want to remain at that <span class="math notranslate nohighlight">\(b\)</span>.</p>
 <p>In more detail, here is what we’ll do:</p>
@@ -1830,7 +1824,7 @@ this new 3D surface.</p></li>
 <li><p>Repeat the above analyses for <span class="math notranslate nohighlight">\(b^{**} = b^* + e\)</span>.</p></li>
 </ol>
 <p>To conduct the above procedures, we create a function <code class="docutils literal notranslate"><span class="pre">off_eq_check</span></code>
-thatinputs the BCG model instance parameters, equilibrium capital
+that inputs the BCG model instance parameters, equilibrium capital
 <span class="math notranslate nohighlight">\(k^*\)</span> and debt <span class="math notranslate nohighlight">\(b^*\)</span>, and a perturbation of debt <span class="math notranslate nohighlight">\(e\)</span>.</p>
 <p>The function outputs the fixed point firm values <span class="math notranslate nohighlight">\(V^{**}\)</span>, prices
 <span class="math notranslate nohighlight">\(q^{**}\)</span>, <span class="math notranslate nohighlight">\(p^{**}\)</span>, and consumption choices <span class="math notranslate nohighlight">\(c^{**}\)</span>.</p>
@@ -2194,7 +2188,7 @@ Equilibrium firm value: 0.0974
 its debt issuance to attain a higher valuation.</p>
 <p>That incentive to deviate means that <span class="math notranslate nohighlight">\((k^*,b^*+e)\)</span> is not an
 equilibrium capital structure for the firm.</p>
-<p>Interestingly, if consumers were to anticiapte that firms would
+<p>Interestingly, if consumers were to anticipate that firms would
 over-issue debt, i.e. <span class="math notranslate nohighlight">\(B &gt; b^*\)</span>,then both types of agents would
 want willing to hold corporate debt. Specifically, <span class="math notranslate nohighlight">\(\xi^1 &gt; 0\)</span>:</p>
 <div class="cell docutils container">
@@ -2984,7 +2978,7 @@ of agents hold equities, only agents of type 2 holds bonds.</p>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="BCG_complete_mkts.html">
-   9. Capital Structures in a Complete Markets Economy
+   9. Irrelevance of Capital Structures with Complete Markets
   </a>
  </li>
  <li class="toctree-l1 current active">

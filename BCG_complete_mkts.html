@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9. Capital Structures in a Complete Markets Economy &#8212; PhD Macro with Python</title>
+    <title>9. Irrelevance of Capital Structures with Complete Markets &#8212; PhD Macro with Python</title>
     <link rel="stylesheet" href="_static/quantecon-book-theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
@@ -43,22 +43,22 @@
 <!-- Normal Meta Tags -->
 <meta name="author" context="Thomas J. Sargent &amp; John Stachurski" />
 <meta name="keywords" content="" />
-<meta name="description" content=Capital Structures in a Complete Markets Economy  Contents  Capital Structures in a Complete Markets Economy  Introduction  Competitive equilibrium  Code  In ad />
+<meta name="description" content=Irrelevance of Capital Structures with Complete Markets  Contents  Irrelevance of Capital Structures with Complete Markets  Introduction  Competitive equilibriu />
 
 <!-- Twitter tags -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="Capital Structures in a Complete Markets Economy"/>
-<meta name="twitter:description" content="Capital Structures in a Complete Markets Economy  Contents  Capital Structures in a Complete Markets Economy  Introduction  Competitive equilibrium  Code  In ad">
+<meta name="twitter:title" content="Irrelevance of Capital Structures with Complete Markets"/>
+<meta name="twitter:description" content="Irrelevance of Capital Structures with Complete Markets  Contents  Irrelevance of Capital Structures with Complete Markets  Introduction  Competitive equilibriu">
 <meta name="twitter:creator" content="@">
 <meta name="twitter:image" content="">
 
 <!-- Opengraph tags -->
-<meta property="og:title" content="Capital Structures in a Complete Markets Economy" />
+<meta property="og:title" content="Irrelevance of Capital Structures with Complete Markets" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="None" />
 <meta property="og:image" content="" />
-<meta property="og:description" content="Capital Structures in a Complete Markets Economy  Contents  Capital Structures in a Complete Markets Economy  Introduction  Competitive equilibrium  Code  In ad" />
+<meta property="og:description" content="Irrelevance of Capital Structures with Complete Markets  Contents  Irrelevance of Capital Structures with Complete Markets  Introduction  Competitive equilibriu" />
 <meta property="og:site_name" content="PhD Macro with Python" />
 
 <meta name="theme-color" content="#ffffff" />
@@ -98,19 +98,19 @@
                                 </li>
                                 
                                 <li class="nav-item toc-entry toc-h3">
-                                    <a href="#preferences" class="nav-link">Preferences:</a>
-                                </li>
-                                
-                                <li class="nav-item toc-entry toc-h3">
-                                    <a href="#shock-distribution" class="nav-link">Shock distribution:</a>
-                                </li>
-                                
-                                <li class="nav-item toc-entry toc-h3">
                                     <a href="#endowments" class="nav-link">Endowments</a>
                                 </li>
                                 
                                 <li class="nav-item toc-entry toc-h3">
                                     <a href="#technology" class="nav-link">Technology:</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#preferences" class="nav-link">Preferences:</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#shock-distribution" class="nav-link">Shock distribution:</a>
                                 </li>
                                 
                                 <li class="nav-item toc-entry toc-h3">
@@ -125,7 +125,7 @@
                                     <a href="#helpful-observations-and-bookkeeping" class="nav-link">Helpful observations and bookkeeping</a><ul class="nav section-nav flex-column">
                                         
                                 <li class="nav-item toc-entry toc-h4">
-                                    <a href="#remark" class="nav-link">Remark</a>
+                                    <a href="#remarks" class="nav-link">Remarks</a>
                                 </li>
                                 
                                     </ul>
@@ -224,7 +224,7 @@
 
                         <p class="page__header-heading"><a href="intro.html">PhD Macro with Python</a></p>
 
-                        <p class="page__header-subheading">Capital Structures in a Complete Markets Economy</p>
+                        <p class="page__header-subheading">Irrelevance of Capital Structures with Complete Markets</p>
 
                     </div>
 
@@ -243,12 +243,12 @@
         <a href="https://quantecon.org/" title="quantecon.org">
                 <img style="width:250px;display:inline;" width="250px" src="https://assets.quantecon.org/img/qe-menubar-logo.svg" alt="QuantEcon">
         </a>
-</div><div class="section" id="capital-structures-in-a-complete-markets-economy">
-<h1><a class="toc-backref" href="#id4"><span class="section-number">9. </span>Capital Structures in a Complete Markets Economy</a><a class="headerlink" href="#capital-structures-in-a-complete-markets-economy" title="Permalink to this headline">¶</a></h1>
+</div><div class="section" id="irrelevance-of-capital-structures-with-complete-markets">
+<h1><a class="toc-backref" href="#id4"><span class="section-number">9. </span>Irrelevance of Capital Structures with Complete Markets</a><a class="headerlink" href="#irrelevance-of-capital-structures-with-complete-markets" title="Permalink to this headline">¶</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#capital-structures-in-a-complete-markets-economy" id="id4">Capital Structures in a Complete Markets Economy</a></p>
+<li><p><a class="reference internal" href="#irrelevance-of-capital-structures-with-complete-markets" id="id4">Irrelevance of Capital Structures with Complete Markets</a></p>
 <ul>
 <li><p><a class="reference internal" href="#introduction" id="id5">Introduction</a></p></li>
 <li><p><a class="reference internal" href="#competitive-equilibrium" id="id6">Competitive equilibrium</a></p></li>
@@ -268,42 +268,31 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already up-to-date: quantecon in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (0.4.8)
-Requirement already satisfied, skipping upgrade: numba&gt;=0.38 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (0.50.1)
 Requirement already satisfied, skipping upgrade: sympy in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (1.6.1)
-Requirement already satisfied, skipping upgrade: scipy&gt;=1.0.0 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (1.5.0)
-Requirement already satisfied, skipping upgrade: numpy in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (1.18.5)
+Requirement already satisfied, skipping upgrade: numba&gt;=0.38 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (0.50.1)
 Requirement already satisfied, skipping upgrade: requests in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (2.24.0)
-Requirement already satisfied, skipping upgrade: llvmlite&lt;0.34,&gt;=0.33.0.dev0 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (0.33.0+1.g022ab0f)
-Requirement already satisfied, skipping upgrade: setuptools in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (49.2.0.post20200714)
+Requirement already satisfied, skipping upgrade: numpy in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (1.18.5)
+Requirement already satisfied, skipping upgrade: scipy&gt;=1.0.0 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (1.5.0)
+Requirement already satisfied, skipping upgrade: mpmath&gt;=0.19 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from sympy-&gt;quantecon) (1.1.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied, skipping upgrade: mpmath&gt;=0.19 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from sympy-&gt;quantecon) (1.1.0)
-Requirement already satisfied, skipping upgrade: chardet&lt;4,&gt;=3.0.2 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from requests-&gt;quantecon) (3.0.4)
-Requirement already satisfied, skipping upgrade: idna&lt;3,&gt;=2.5 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from requests-&gt;quantecon) (2.10)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied, skipping upgrade: llvmlite&lt;0.34,&gt;=0.33.0.dev0 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (0.33.0+1.g022ab0f)
+Requirement already satisfied, skipping upgrade: setuptools in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (49.2.0.post20200714)
 Requirement already satisfied, skipping upgrade: certifi&gt;=2017.4.17 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from requests-&gt;quantecon) (2020.6.20)
+Requirement already satisfied, skipping upgrade: idna&lt;3,&gt;=2.5 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from requests-&gt;quantecon) (2.10)
+Requirement already satisfied, skipping upgrade: chardet&lt;4,&gt;=3.0.2 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from requests-&gt;quantecon) (3.0.4)
 Requirement already satisfied, skipping upgrade: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from requests-&gt;quantecon) (1.25.9)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting interpolation
-  Using cached interpolation-2.1.6-py3-none-any.whl (54 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Processing /Users/matthewmckay/Library/Caches/pip/wheels/b0/b9/10/fd85fe4c1e7ed2f1864865b842a4b847a897c6246033bbd3cf/Tempita-0.5.2-py3-none-any.whl
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scipy&gt;=1.4.1 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from interpolation) (1.5.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: interpolation in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (2.1.6)
+Requirement already satisfied: scipy&gt;=1.4.1 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from interpolation) (1.5.0)
 Requirement already satisfied: numba&gt;=0.47 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from interpolation) (0.50.1)
+Requirement already satisfied: tempita&gt;=0.5.2 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from interpolation) (0.5.2)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&gt;=1.18.1 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from interpolation) (1.18.5)
 Requirement already satisfied: llvmlite&lt;0.34,&gt;=0.33.0.dev0 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from numba&gt;=0.47-&gt;interpolation) (0.33.0+1.g022ab0f)
 Requirement already satisfied: setuptools in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from numba&gt;=0.47-&gt;interpolation) (49.2.0.post20200714)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: tempita, interpolation
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed interpolation-2.1.6 tempita-0.5.2
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting package metadata (current_repodata.json): - 
@@ -495,22 +484,8 @@ Requirement already satisfied: setuptools in /Users/matthewmckay/anaconda3/envs/
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>done
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Solving environment: | 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
+Solving environment: - 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
@@ -529,149 +504,6 @@ Requirement already satisfied: setuptools in /Users/matthewmckay/anaconda3/envs/
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>done
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==&gt; WARNING: A newer version of conda exists. &lt;==
-  current version: 4.8.5
-  latest version: 4.9.0
-
-Please update conda by running
-
-    $ conda update -n base conda
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>## Package Plan ##
-
-  environment location: /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book
-
-  added / updated specs:
-    - plotly
-    - plotly-orca
-
-
-The following NEW packages will be INSTALLED:
-
-  plotly             plotly/noarch::plotly-4.12.0-py_0
-  plotly-orca        plotly/osx-64::plotly-orca-1.3.1-1
-  retrying           conda-forge/noarch::retrying-1.3.3-py_2
-
-
-Preparing transaction: / 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>done
-Verifying transaction: | 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
@@ -755,595 +587,17 @@ Verifying transaction: |
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>done
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Executing transaction: | 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>| 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>done
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==&gt; WARNING: A newer version of conda exists. &lt;==
+  current version: 4.8.5
+  latest version: 4.9.0
+
+Please update conda by running
+
+    $ conda update -n base conda
+
+
+
+# All requested packages already installed.
 </pre></div>
 </div>
 </div>
@@ -1365,19 +619,20 @@ algorithm</p></li>
 <li><p>illustrating classic complete markets outcomes that include</p>
 <ul>
 <li><p>indeterminacy of consumers’ portfolio choices</p></li>
-<li><p>indeterminacy of a firm’s financial structure that underlies a
+<li><p>indeterminacy of firms’ financial structures that underlies a
 Modigliani-Miller theorem</p></li>
 </ul>
 </li>
 <li><p>introducing <code class="docutils literal notranslate"><span class="pre">Big</span> <span class="pre">K,</span> <span class="pre">little</span> <span class="pre">k</span></code> issues in a simple context that will
 recur in the BCG incomplete markets environment</p></li>
 </ul>
-<p>A Big K, little k analysis also played roles in <a class="reference external" href="https://python.quantecon.org/cass_koopmans.html">this</a> quantecon lecture as well  as <a class="reference external" href="https://python.quantecon.org/rational_expectations.html">here</a> and <a class="reference internal" href="dyn_stack.html"><span class="doc">here</span></a>.</p>
+<p>A Big K, little k analysis also played roles in <a class="reference external" href="https://python.quantecon.org/cass_koopmans.html">this quantecon lecture</a> as well  as
+<a class="reference external" href="https://python.quantecon.org/rational_expectations.html">here</a> and <a class="reference internal" href="dyn_stack.html"><span class="doc">here</span></a>.</p>
 <div class="section" id="setup">
 <h3><span class="section-number">9.1.1. </span>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
 <p>The economy lasts for two periods, <span class="math notranslate nohighlight">\(t=0, 1\)</span>.</p>
-<p>There are two types of consumers named <span class="math notranslate nohighlight">\(i=1,2\)</span>.</p>
-<p>A scalar random variable <span class="math notranslate nohighlight">\(\epsilon\)</span> affects both</p>
+<p>There are two types of consumers named :math:<code class="docutils literal notranslate"><span class="pre">i=1,2</span></code></p>
+<p>A scalar random variable <span class="math notranslate nohighlight">\(\epsilon\)</span> with probability density <span class="math notranslate nohighlight">\(g(\epsilon)\)</span> affects both</p>
 <ul class="simple">
 <li><p>the physical return in period <span class="math notranslate nohighlight">\(1\)</span> from investing
 <span class="math notranslate nohighlight">\(k \geq 0\)</span> in capital in period <span class="math notranslate nohighlight">\(0\)</span>.</p></li>
@@ -1386,10 +641,10 @@ agents of types <span class="math notranslate nohighlight">\(i =1\)</span> and <
 </ul>
 <p>Type <span class="math notranslate nohighlight">\(i=1\)</span> and <span class="math notranslate nohighlight">\(i=2\)</span> agents’ period <span class="math notranslate nohighlight">\(1\)</span> endowments are
 correlated with the physical return on capital in different ways.</p>
-<p>We discuss two versions of the economy:</p>
+<p>We discuss two arrangements:</p>
 <ul class="simple">
 <li><p>a command economy in which a benevolent planner chooses <span class="math notranslate nohighlight">\(k\)</span> and
-allocates goods to the two consumers in each period and each random
+allocates goods to the two types of  consumers in each period and each random
 second period state</p></li>
 <li><p>a competitive equilibrium with markets in claims on physical capital
 and a complete set (possibly a continuum) of one-period Arrow
@@ -1397,8 +652,35 @@ securities that pay period <span class="math notranslate nohighlight">\(1\)</spa
 the realization of random variable <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p></li>
 </ul>
 </div>
+<div class="section" id="endowments">
+<h3><span class="section-number">9.1.2. </span>Endowments<a class="headerlink" href="#endowments" title="Permalink to this headline">¶</a></h3>
+<p>There is a single consumption good in period <span class="math notranslate nohighlight">\(0\)</span> and at each
+random state <span class="math notranslate nohighlight">\(\epsilon\)</span> in period <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p>Economy-wide endowments in periods <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{aligned}
+w_0 &amp; \cr
+w_1(\epsilon) &amp;  \textrm{ in state }\epsilon
+\end{aligned}
+\]</div>
+<p>Soon we’ll explain how aggregate endowments are divided between
+type <span class="math notranslate nohighlight">\(i=1\)</span> and type <span class="math notranslate nohighlight">\(i=2\)</span> consumers.</p>
+<p>We don’t need to do that in order to describe a social planning problem.</p>
+</div>
+<div class="section" id="technology">
+<h3><span class="section-number">9.1.3. </span>Technology:<a class="headerlink" href="#technology" title="Permalink to this headline">¶</a></h3>
+<p>Where <span class="math notranslate nohighlight">\(\alpha \in (0,1)\)</span> and <span class="math notranslate nohighlight">\(A &gt;0\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\begin{aligned}
+ c_0^1 + c_0^2 &amp; = w_0^1 + w_0^2 - k \cr
+ c_1^1(\epsilon) + c_1^2(\epsilon) &amp; =  w_1^1(\epsilon) + w_1^2(\epsilon) + e^\epsilon A k^\alpha, \quad k \geq 0
+\end{aligned}
+\]</div>
+</div>
 <div class="section" id="preferences">
-<h3><span class="section-number">9.1.2. </span>Preferences:<a class="headerlink" href="#preferences" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.4. </span>Preferences:<a class="headerlink" href="#preferences" title="Permalink to this headline">¶</a></h3>
 <p>A consumer of type <span class="math notranslate nohighlight">\(i\)</span> orders period <span class="math notranslate nohighlight">\(0\)</span> consumption
 <span class="math notranslate nohighlight">\(c_0^i\)</span> and state <span class="math notranslate nohighlight">\(\epsilon\)</span>, period <span class="math notranslate nohighlight">\(1\)</span> consumption
 <span class="math notranslate nohighlight">\(c^i_1(\epsilon)\)</span> by</p>
@@ -1416,42 +698,15 @@ u(c) = \begin{cases}
 \end{split}\]</div>
 </div>
 <div class="section" id="shock-distribution">
-<h3><span class="section-number">9.1.3. </span>Shock distribution:<a class="headerlink" href="#shock-distribution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.5. </span>Shock distribution:<a class="headerlink" href="#shock-distribution" title="Permalink to this headline">¶</a></h3>
 <p>Sometimes we assume that</p>
 <div class="math notranslate nohighlight">
 \[
 \epsilon \sim g(\epsilon) = {\mathcal N}(0,1)
 \]</div>
-<p>Other times, we’ll instead assume that <span class="math notranslate nohighlight">\(g(\cdot)\)</span> is a probability
-mass function that servers as a discrete approximation to a standardized
+<p>At other times, we’ll instead assume that <span class="math notranslate nohighlight">\(g(\cdot)\)</span> is a probability
+mass function that serves as a discrete approximation to a standardized
 normal density.</p>
-</div>
-<div class="section" id="endowments">
-<h3><span class="section-number">9.1.4. </span>Endowments<a class="headerlink" href="#endowments" title="Permalink to this headline">¶</a></h3>
-<p>There is a single consumption good in period <span class="math notranslate nohighlight">\(0\)</span> and at each
-random state <span class="math notranslate nohighlight">\(\epsilon\)</span> in period <span class="math notranslate nohighlight">\(1\)</span>.</p>
-<p>Economy-wide endowments in periods <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span> are</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{aligned}
-w_0 &amp; \cr
-w_1(\epsilon) &amp;  \textrm{ in state }\epsilon
-\end{aligned}
-\]</div>
-<p>Soon we’ll explain how these aggregate endowments are divided between
-type <span class="math notranslate nohighlight">\(i=1\)</span> and type <span class="math notranslate nohighlight">\(i=2\)</span> consumers.</p>
-<p>We don’t need to do that in order to describe a social planning problem.</p>
-</div>
-<div class="section" id="technology">
-<h3><span class="section-number">9.1.5. </span>Technology:<a class="headerlink" href="#technology" title="Permalink to this headline">¶</a></h3>
-<p>Where <span class="math notranslate nohighlight">\(\alpha \in (0,1)\)</span> and <span class="math notranslate nohighlight">\(A &gt;0\)</span></p>
-<div class="math notranslate nohighlight">
-\[
-\begin{aligned}
- c_0^1 + c_0^2 &amp; = w_0^1 + w_0^2 - k \cr
- c_1^1(\epsilon) + c_1^2(\epsilon) &amp; =  w_1^1(\epsilon) + w_1^2(\epsilon) + e^\epsilon A k^\alpha, \quad k \geq 0
-\end{aligned}
-\]</div>
 </div>
 <div class="section" id="example-parameterizations">
 <h3><span class="section-number">9.1.6. </span>Example parameterizations<a class="headerlink" href="#example-parameterizations" title="Permalink to this headline">¶</a></h3>
@@ -1473,7 +728,7 @@ w_1^i &amp; = e^{- \chi_i \mu - .5 \chi_i^2 \sigma^2 + \chi \epsilon} , \quad \c
 \textrm{obj} = \phi_1 u^1 + \phi_2 u^2 , \quad \phi_i \geq 0,  \phi_1 + \phi_2 = 1
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi_i \geq 0\)</span> is a Pareto weight that the planner attaches
-to consumer <span class="math notranslate nohighlight">\(i\)</span>.</p>
+to a consumer of type  <span class="math notranslate nohighlight">\(i\)</span>.</p>
 <p>We form the following Lagrangian for the planner’s problem:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1483,7 +738,7 @@ to consumer <span class="math notranslate nohighlight">\(i\)</span>.</p>
                    c_1^1(\epsilon) - c_1^2(\epsilon)\right]  g(\epsilon) d\epsilon
 \end{aligned}
 \]</div>
-<p>First-order necessary optimality conditions for planning problem:</p>
+<p>First-order necessary optimality conditions for the planning problem are:</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{aligned}
@@ -1503,7 +758,7 @@ k:  \quad &amp;  -\lambda_0 + \beta \alpha A k^{\alpha -1} \int \lambda_1(\epsil
 \end{aligned}
 \]</div>
 <p>These together with the fifth first-order condition for the planner
-imply the following equation that determines the optimal choice of
+imply the following equation that determines an optimal choice of
 capital</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1523,7 +778,9 @@ u'(c) = c^{-\gamma}
 \[
 \frac{u'(c^1)}{u'(c^2)} = \left(\frac{c^1}{c^2}\right)^{-\gamma} = \frac{\phi_2}{\phi_1}
 \]</div>
-<p>which implies that</p>
+<p>where it is to be understood  that this equation holds for <span class="math notranslate nohighlight">\(c^1 = c^1_0\)</span> and <span class="math notranslate nohighlight">\(c^2 = c^2_0\)</span> and also
+for <span class="math notranslate nohighlight">\(c^1 = c^1(\epsilon)\)</span> and <span class="math notranslate nohighlight">\(c^2 = c^2(\epsilon)\)</span> for all <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
+<p>With the same understanding, it follows that</p>
 <div class="math notranslate nohighlight">
 \[
 \left(\frac{c^1}{c^2}\right) = \left(\frac{\phi_2}{\phi_1}\right)^{- \gamma^{-1}}
@@ -1561,23 +818,22 @@ C_0 &amp; = w_0 - K \cr
 C_1(\epsilon) &amp; = w_1(\epsilon) + A K^\alpha e^\epsilon \cr
 c_0^1 &amp; = \eta C_0 \cr
 c_0^2 &amp; = (1 - \eta) C_0 \cr
-c_1^1(\epsilon) &amp; = \eta C_1 (\epsilon) \cr
+c_1^1(\epsilon) &amp; = \eta C^1 (\epsilon) \cr
 c_1^2 (\epsilon) &amp; = (1 - \eta) C_1(\epsilon)
 \end{aligned}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\eta \in [0,1]\)</span> is the consumption share parameter
 mentioned above that is a function of the Pareto weight <span class="math notranslate nohighlight">\(\phi_1\)</span>
 and the utility curvature parameter <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
-<div class="section" id="remark">
-<h4><span class="section-number">9.1.8.1. </span>Remark<a class="headerlink" href="#remark" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="remarks">
+<h4><span class="section-number">9.1.8.1. </span>Remarks<a class="headerlink" href="#remarks" title="Permalink to this headline">¶</a></h4>
 <p>The relative Pareto weight parameter <span class="math notranslate nohighlight">\(\eta\)</span> does not appear in
 equation <a class="reference internal" href="#equation-focke">(9.1)</a> that determines <span class="math notranslate nohighlight">\(K\)</span>.</p>
 <p>Neither does it influence <span class="math notranslate nohighlight">\(c_0\)</span> or <span class="math notranslate nohighlight">\(c_1(\epsilon)\)</span>, which
 depend solely on <span class="math notranslate nohighlight">\(K\)</span>.</p>
-<p>The role of <span class="math notranslate nohighlight">\(\eta\)</span> is to determine the allocation total
+<p>The role of <span class="math notranslate nohighlight">\(\eta\)</span> is to determine how to allocate total
 consumption between the two types of consumers.</p>
-<p>Thus, the allocation of consumption between consumers is independent of
-the planner’s choice of <span class="math notranslate nohighlight">\(K\)</span>.</p>
+<p>Thus, the planner’s choice of <span class="math notranslate nohighlight">\(K\)</span> does not interact with how it wants to allocate  consumption.</p>
 </div>
 </div>
 </div>
@@ -1585,13 +841,12 @@ the planner’s choice of <span class="math notranslate nohighlight">\(K\)</span
 <h2><a class="toc-backref" href="#id6"><span class="section-number">9.2. </span>Competitive equilibrium</a><a class="headerlink" href="#competitive-equilibrium" title="Permalink to this headline">¶</a></h2>
 <p>We now describe a competitive equilibrium for an economy that has
 specifications of consumer preferences, technology, and aggregate
-endowments that are identical to those of the preceding planning
+endowments that are identical to those in the preceding planning
 problem.</p>
-<p>While no prices appeared in the planning problem – only quantities –
+<p>While prices do not  appear in the planning problem – only quantities –
 prices play an important role in a competitive equilibrium.</p>
 <p>To understand how the planning economy is related to a competitive
-equilibrium, we now turn to discuss the <code class="docutils literal notranslate"><span class="pre">Big</span> <span class="pre">K,</span> <span class="pre">little</span> <span class="pre">k</span></code> idea that is
-widely used in macroeconomics and public finance.</p>
+equilibrium, we now turn to  the <code class="docutils literal notranslate"><span class="pre">Big</span> <span class="pre">K,</span> <span class="pre">little</span> <span class="pre">k</span></code> distinction.</p>
 <div class="section" id="measures-of-agents-and-firms">
 <h3><span class="section-number">9.2.1. </span>Measures of agents and firms<a class="headerlink" href="#measures-of-agents-and-firms" title="Permalink to this headline">¶</a></h3>
 <p>We follow BCG in assuming that there are equal unit measures of</p>
@@ -1615,7 +870,7 @@ Then define Big <span class="math notranslate nohighlight">\(K\)</span> as</p>
 \[
 K = \int k(\zeta) d \, \zeta
 \]</div>
-<p>The assumption that there are equal measures of our three types of
+<p>The assumption that there are continua of our three types of
 agents plays an important role making each individual agent into a
 powerless <strong>price taker</strong>:</p>
 <ul class="simple">
@@ -1623,16 +878,16 @@ powerless <strong>price taker</strong>:</p>
 <span class="math notranslate nohighlight">\(c^i(\omega)\)</span> of <span class="math notranslate nohighlight">\(C^i\)</span> taking prices as given</p></li>
 <li><p>an individual firm chooses its own (infinitesmimal) part
 <span class="math notranslate nohighlight">\(k(\zeta)\)</span> of <span class="math notranslate nohighlight">\(K\)</span> taking prices as</p></li>
-<li><p>However, equilibrium prices depend on the <code class="docutils literal notranslate"><span class="pre">Big</span> <span class="pre">K,</span> <span class="pre">Big</span> <span class="pre">C</span></code> objects
+<li><p>equilibrium prices depend on the <code class="docutils literal notranslate"><span class="pre">Big</span> <span class="pre">K,</span> <span class="pre">Big</span> <span class="pre">C</span></code> objects
 <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(C\)</span></p></li>
+<li><p>in equilibrium, it turns out that <span class="math notranslate nohighlight">\(K = k, C^i = c^i\)</span></p></li>
 </ul>
 <p>The assumption about measures of agents is thus a powerful device for
 making a host of competitive agents take as given the equilibrium prices
-that turn out to be determined by the decisions of hosts of agents just
-like them.</p>
+that turn out to be determined by the decisions of hosts of agents who behave just like they do.</p>
 <div class="section" id="ownership">
 <h4><span class="section-number">9.2.1.1. </span>Ownership<a class="headerlink" href="#ownership" title="Permalink to this headline">¶</a></h4>
-<p>Consumers of type <span class="math notranslate nohighlight">\(i\)</span> have the following exogenous endowments of
+<p>Consumers of type <span class="math notranslate nohighlight">\(i\)</span> own the following exogenous amounts of
 the consumption good in periods <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1649,13 +904,13 @@ the consumption good in periods <span class="math notranslate nohighlight">\(0\)
 \sum_i w_1^i(\epsilon) &amp; = w_1(\epsilon)
 \end{aligned}
 \]</div>
-<p>Consumers own a firm that operates the technology for converging
-nonnegative amounts of the time <span class="math notranslate nohighlight">\(0\)</span> consumption good one for one
+<p>Consumers also own shares in  a firm that operates the technology for converging
+nonnegative amounts of the time <span class="math notranslate nohighlight">\(0\)</span> consumption good one-for-one
 into a capital good <span class="math notranslate nohighlight">\(k\)</span> that produces
 <span class="math notranslate nohighlight">\(A k^\alpha e^\epsilon\)</span> units of time <span class="math notranslate nohighlight">\(1\)</span> consumption good
 in time <span class="math notranslate nohighlight">\(1\)</span> state <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
 <p>Consumers of types <span class="math notranslate nohighlight">\(i=1,2\)</span> are endowed with <span class="math notranslate nohighlight">\(\theta_0^i\)</span>
-shares of that firm and</p>
+shares of a firm and</p>
 <div class="math notranslate nohighlight">
 \[
 \theta_0^1 + \theta_0^2 = 1
@@ -1690,23 +945,23 @@ consumer <span class="math notranslate nohighlight">\(i\)</span> at time <span c
 <li><p><span class="math notranslate nohighlight">\(\tilde V\)</span> be the value of equity issued by the representative
 firm</p></li>
 <li><p><span class="math notranslate nohighlight">\(K, C_0\)</span> be two scalars and <span class="math notranslate nohighlight">\(C_1(\epsilon)\)</span> a function
-that we use to construct a guess of an equilibrium a pricing kernel
+that we use to construct a guess of an equilibrium  pricing kernel
 for Arrow securities</p></li>
 </ul>
-<p>We move on to describe the constrained optimum problems faced by
+<p>We proceed  to describe constrained optimum problems faced by
 consumers and a representative firm in a competitive equilibrium.</p>
 </div>
 <div class="section" id="a-representative-firms-problem">
 <h3><span class="section-number">9.2.3. </span>A representative firm’s problem<a class="headerlink" href="#a-representative-firms-problem" title="Permalink to this headline">¶</a></h3>
 <p>A representative firm takes Arrow security prices <span class="math notranslate nohighlight">\(q(\epsilon)\)</span> as
 given and finances itself entirely by issuing equity.</p>
-<p>The firm purchases capital <span class="math notranslate nohighlight">\(k \geq 0\)</span> from households at time
+<p>The firm purchases capital <span class="math notranslate nohighlight">\(k \geq 0\)</span> from consumers at time
 <span class="math notranslate nohighlight">\(0\)</span> and finances itself by issuing equity at time <span class="math notranslate nohighlight">\(0\)</span>.</p>
 <p>The firm produces time <span class="math notranslate nohighlight">\(1\)</span> goods <span class="math notranslate nohighlight">\(A k^\alpha e^\epsilon\)</span> in
-state <span class="math notranslate nohighlight">\(\epsilon\)</span> and pays all of these <code class="docutils literal notranslate"><span class="pre">earnings</span></code> to owners of
+state <span class="math notranslate nohighlight">\(\epsilon\)</span> and pays all of these <code class="docutils literal notranslate"><span class="pre">earnings</span></code> to owners of its
 equity.</p>
-<p>The value of equity at time <span class="math notranslate nohighlight">\(0\)</span> can be computed by multiplying
-these state-contingent earnings by their Arrow securities prices and
+<p>The value of a firm’s equity at time <span class="math notranslate nohighlight">\(0\)</span> can be computed by multiplying
+its state-contingent earnings by their Arrow securities prices and then
 adding over all contingencies:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1717,25 +972,25 @@ adding over all contingencies:</p>
 \[
 V = - k + \int A k^\alpha e^\epsilon q(\epsilon) d \epsilon
 \]</div>
-<p>The first-order necessary condition for an optimal <span class="math notranslate nohighlight">\(k\)</span> is</p>
+<p>The firm’s first-order necessary condition for an optimal <span class="math notranslate nohighlight">\(k\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[
 - 1 + \alpha A k^{\alpha -1} \int e^\epsilon q(\epsilon) d \epsilon = 0
 \]</div>
-<p>The time <span class="math notranslate nohighlight">\(0\)</span> value of the representative firm is</p>
+<p>The time <span class="math notranslate nohighlight">\(0\)</span> value of a representative firm is</p>
 <div class="math notranslate nohighlight">
 \[
 V = - k + \tilde V
 \]</div>
-<p>The right side equals the value of equity minus the time <span class="math notranslate nohighlight">\(0\)</span> goods
+<p>The right side equals the value of equity minus the cost of the time <span class="math notranslate nohighlight">\(0\)</span> goods
 that it purchases and uses as capital.</p>
 </div>
 <div class="section" id="a-consumers-problem">
 <h3><span class="section-number">9.2.4. </span>A consumer’s problem<a class="headerlink" href="#a-consumers-problem" title="Permalink to this headline">¶</a></h3>
 <p>We now pose a consumer’s problem in a competitive equilibrium.</p>
-<p>Each consumer faces a given Arrow securities pricing kernel
-<span class="math notranslate nohighlight">\(q(\epsilon)\)</span> and given value of the firm <span class="math notranslate nohighlight">\(V\)</span> and price of
-equity <span class="math notranslate nohighlight">\(\tilde V\)</span> as a price taker.</p>
+<p>As a price taker, each consumer faces a given Arrow securities pricing kernel
+<span class="math notranslate nohighlight">\(q(\epsilon)\)</span>, a given value of a firm <span class="math notranslate nohighlight">\(V\)</span> that has chosen capital stock <span class="math notranslate nohighlight">\(k\)</span>, a price of
+equity <span class="math notranslate nohighlight">\(\tilde V\)</span>, and given prospective random dividends next period <span class="math notranslate nohighlight">\(A k^\alpha e^\epsilon\)</span>.</p>
 <p>Consumer <span class="math notranslate nohighlight">\(i\)</span> chooses a scalar <span class="math notranslate nohighlight">\(c_0^i\)</span> and a function
 <span class="math notranslate nohighlight">\(c_1^i(\epsilon)\)</span> to maximize</p>
 <div class="math notranslate nohighlight">
@@ -1764,7 +1019,7 @@ L^i &amp; = u(c_0^i) + \beta \int u(c^i_1(\epsilon)) g(\epsilon) d \epsilon \cr
            + a^i(\epsilon) c_1^i(\epsilon) g(\epsilon)] d \epsilon
 \end{aligned}
 \]</div>
-<p>The first-order necessary conditions for an optimum with respect to
+<p>First-order necessary conditions for an optimum with respect to
 <span class="math notranslate nohighlight">\(c_0^i, c_1^i(\epsilon)\)</span>, and <span class="math notranslate nohighlight">\(a^i(\epsilon)\)</span> are</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1774,11 +1029,11 @@ c_1^i(\epsilon): \quad &amp; \beta u'(c_1^i(\epsilon)) g(\epsilon) - \beta \lamb
 a^i(\epsilon): \quad &amp; -\lambda_0^i q(\epsilon) + \beta \lambda_1^i(\epsilon) = 0
 \end{aligned}
 \]</div>
-<p>These equations imply that household <span class="math notranslate nohighlight">\(i\)</span> adjusts its consumption
+<p>These equations imply that consumer <span class="math notranslate nohighlight">\(i\)</span> adjusts its consumption
 plan to satisfy</p>
 <div class="math notranslate nohighlight" id="equation-qgeqn">
 <span class="eqno">(9.2)<a class="headerlink" href="#equation-qgeqn" title="Permalink to this equation">¶</a></span>\[q(\epsilon) = \beta \left( \frac{u'(c_1^i(\epsilon))}{u'(c_0^i)} \right) g(\epsilon)\]</div>
-<p>To deduce a restriction on the household’s choice of <span class="math notranslate nohighlight">\(\theta^i\)</span> we
+<p>To deduce a restriction on the consumer’s choice of <span class="math notranslate nohighlight">\(\theta^i\)</span> we
 solve the period <span class="math notranslate nohighlight">\(1\)</span> budget constraint to express
 <span class="math notranslate nohighlight">\(a^i(\epsilon)\)</span> as</p>
 <div class="math notranslate nohighlight">
@@ -1790,7 +1045,7 @@ budget constraint and rearrange to get the single intertemporal budget
 constraint</p>
 <div class="math notranslate nohighlight" id="equation-noarb">
 <span class="eqno">(9.3)<a class="headerlink" href="#equation-noarb" title="Permalink to this equation">¶</a></span>\[w_0^i + \theta_0^i V + \int w_1^i(\epsilon) q(\epsilon) d \epsilon + \theta^i \left[ A k^\alpha \int e^\epsilon q(\epsilon) d \epsilon - \tilde V \right]
-= c_0^i + \int c_1^i(\epsilon) q(\epsilon) d \epsilon\]</div>
+\geq c_0^i + \int c_1^i(\epsilon) q(\epsilon) d \epsilon\]</div>
 <p>The right side of equation <a class="reference internal" href="#equation-noarb">(9.3)</a> is the present value
 of consumer <span class="math notranslate nohighlight">\(i\)</span>’s consumption while the left side is the present
 value of consumer <span class="math notranslate nohighlight">\(i\)</span>’s endowment when consumer <span class="math notranslate nohighlight">\(i\)</span> buys
@@ -1800,34 +1055,40 @@ findings.</p>
 <p>Unless</p>
 <div class="math notranslate nohighlight" id="equation-tilde">
 <span class="eqno">(9.4)<a class="headerlink" href="#equation-tilde" title="Permalink to this equation">¶</a></span>\[\tilde V =  A k^\alpha \int e^\epsilon q (\epsilon) d \epsilon\]</div>
-<p>there would be an <strong>arbitrage</strong> opportunity available to the consumer.</p>
+<p>an <strong>arbitrage</strong> opportunity would be open to  consumers.</p>
 <p>If</p>
 <div class="math notranslate nohighlight">
 \[
 \tilde V &gt; A k^\alpha \int e^\epsilon q (\epsilon) d \epsilon
 \]</div>
+<p>the consumer could sustain an arbitrarily high present value of  consumption by setting <span class="math notranslate nohighlight">\(\theta^i\)</span> to an arbitrarily large <strong>negative</strong>
+number.</p>
+<p>If</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde V &lt;  A k^\alpha \int e^\epsilon q (\epsilon) d \epsilon
+\]</div>
 <p>the consumer could sustain an arbitrarily high present value of
-consumption by setting <span class="math notranslate nohighlight">\(\theta^i\)</span> to an arbitrarily negative
-positive number. If&gt; $$</p>
-<blockquote>
-<div><p>\tilde V &lt;  A k^\alpha \int e^\epsilon q (\epsilon) d \epsilon
-$$</p>
-</div></blockquote>
-<p>the consumer could sustain an arbitrarily high present value of
-consumption by setting <span class="math notranslate nohighlight">\(\theta^i\)</span> to be arbitrarily large positive
-number. Since resources are finite, there cannot exist such arbitrage
-opportunities in a competitive equilibrium. Therefore, it must be true
-that the no arbitrage equation <a class="reference internal" href="#equation-tildev2">(9.6)</a> holds.</p>
-<p>Equation <a class="reference internal" href="#equation-tildev2">(9.6)</a> asserts that the value of equity
+consumption by setting <span class="math notranslate nohighlight">\(\theta^i\)</span> to be arbitrarily large <strong>positive</strong>
+number.</p>
+<p>Since resources are finite, there cannot exist such arbitrage
+opportunities in a competitive equilibrium.</p>
+<p>Therefore, it must be true
+that the following no arbitrage condition prevails <a class="reference internal" href="#equation-tildev20">(9.5)</a> holds:</p>
+<div class="math notranslate nohighlight" id="equation-tildev20">
+<span class="eqno">(9.5)<a class="headerlink" href="#equation-tildev20" title="Permalink to this equation">¶</a></span>\[\tilde V = \int A k^\alpha e^\epsilon q(\epsilon;K) d \epsilon\]</div>
+<p>Equation <a class="reference internal" href="#equation-tildev20">(9.5)</a> asserts that the value of equity
 equals the value of the state-contingent dividends
 <span class="math notranslate nohighlight">\(Ak^\alpha e^\epsilon\)</span> evaluated at the Arrow security prices
-<span class="math notranslate nohighlight">\(q(\epsilon)\)</span>.</p>
+<span class="math notranslate nohighlight">\(q(\epsilon; K)\)</span> that we have expressed as a function of <span class="math notranslate nohighlight">\(K\)</span>.</p>
+<p>We’ll say more about this equation below.</p>
 <p><strong>2. Indeterminacy of</strong> <span class="math notranslate nohighlight">\(\theta^i\)</span> <strong>:</strong></p>
-<p>When the no-arbitrage pricing equation <a class="reference internal" href="#equation-tildev2">(9.6)</a>
-prevails, household <span class="math notranslate nohighlight">\(i\)</span>’s choice <span class="math notranslate nohighlight">\(\theta^i\)</span> of equity is
-indeterminate. Consumer <span class="math notranslate nohighlight">\(i\)</span> can offset any choice of
-<span class="math notranslate nohighlight">\(\theta^i\)</span> by setting an appropriate state-contingent schedule
-<span class="math notranslate nohighlight">\(a^i(\epsilon)\)</span>.</p>
+<p>When the no-arbitrage pricing equation <a class="reference internal" href="#equation-tildev20">(9.5)</a>
+prevails, a consumer of type <span class="math notranslate nohighlight">\(i\)</span>’s choice <span class="math notranslate nohighlight">\(\theta^i\)</span> of equity is
+indeterminate.</p>
+<p>Consumer of type <span class="math notranslate nohighlight">\(i\)</span> can offset any choice of
+<span class="math notranslate nohighlight">\(\theta^i\)</span> by setting an appropriate  schedule <span class="math notranslate nohighlight">\(a^i(\epsilon)\)</span> for purchasing  state-contingent
+securities.</p>
 </div>
 <div class="section" id="computing-competitive-equilibrium-prices-and-quantities">
 <h3><span class="section-number">9.2.5. </span>Computing competitive equilibrium prices and quantities<a class="headerlink" href="#computing-competitive-equilibrium-prices-and-quantities" title="Permalink to this headline">¶</a></h3>
@@ -1854,26 +1115,26 @@ guess for the firm’s choice of <span class="math notranslate nohighlight">\(k\
 <p>With the Arrow securities prices that we have guessed, the firm’s
 first-order necessary condition for choosing <span class="math notranslate nohighlight">\(k\)</span> becomes</p>
 <div class="math notranslate nohighlight" id="equation-kk">
-<span class="eqno">(9.5)<a class="headerlink" href="#equation-kk" title="Permalink to this equation">¶</a></span>\[-1 + \alpha A k^{\alpha -1} \int e^\epsilon q(\epsilon;K) d \epsilon = 0\]</div>
+<span class="eqno">(9.6)<a class="headerlink" href="#equation-kk" title="Permalink to this equation">¶</a></span>\[-1 + \alpha A k^{\alpha -1} \int e^\epsilon q(\epsilon;K) d \epsilon = 0\]</div>
 <p>which can be verified to be satisfied if the firm sets</p>
 <div class="math notranslate nohighlight">
 \[
 k = K
 \]</div>
-<p>because by setting <span class="math notranslate nohighlight">\(k=K\)</span> equation <a class="reference internal" href="#equation-kk">(9.5)</a> becomes
+<p>because by setting <span class="math notranslate nohighlight">\(k=K\)</span> equation <a class="reference internal" href="#equation-kk">(9.6)</a> becomes
 equivalent with the planner’s first-order condition
 <a class="reference internal" href="#equation-focke">(9.1)</a> for setting <span class="math notranslate nohighlight">\(K\)</span>.</p>
-<p>To form a consumer’s problem in a competitive equilibrium, we require
+<p>To pose a consumer’s problem in a competitive equilibrium, we require
 not only the above guess for the Arrow securities pricing kernel
 <span class="math notranslate nohighlight">\(q(\epsilon)\)</span> but the value of equity <span class="math notranslate nohighlight">\(\tilde V\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-tildev2">
-<span class="eqno">(9.6)<a class="headerlink" href="#equation-tildev2" title="Permalink to this equation">¶</a></span>\[\tilde V = \int A K^\alpha e^\epsilon q(\epsilon;K) d \epsilon\]</div>
+<span class="eqno">(9.7)<a class="headerlink" href="#equation-tildev2" title="Permalink to this equation">¶</a></span>\[\tilde V = \int A K^\alpha e^\epsilon q(\epsilon;K) d \epsilon\]</div>
 <p>Let <span class="math notranslate nohighlight">\(\tilde V\)</span> be the value of equity implied by Arrow securities
-price function <a class="reference internal" href="#equation-kk">(9.5)</a> and formula
-<a class="reference internal" href="#equation-tildev2">(9.6)</a>.</p>
-<p>At the given prices <a class="reference internal" href="#equation-kk">(9.5)</a> and
-<a class="reference internal" href="#equation-tildev2">(9.6)</a> for <span class="math notranslate nohighlight">\(q(\epsilon)\)</span> and <span class="math notranslate nohighlight">\(\tilde V\)</span>,
-household <span class="math notranslate nohighlight">\(i=1,2\)</span> choose consumption allocations and portolios
+price function <a class="reference internal" href="#equation-kk">(9.6)</a> and formula
+<a class="reference internal" href="#equation-tildev2">(9.7)</a>.</p>
+<p>At the given prices <a class="reference internal" href="#equation-kk">(9.6)</a> and
+<a class="reference internal" href="#equation-tildev2">(9.7)</a> for <span class="math notranslate nohighlight">\(q(\epsilon)\)</span> and <span class="math notranslate nohighlight">\(\tilde V\)</span>,
+consumer <span class="math notranslate nohighlight">\(i=1,2\)</span> choose consumption allocations and portolios
 that satisfy the first-order necessary conditions</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1889,57 +1150,56 @@ c_0^1(\epsilon) + c_0^2(\epsilon) &amp; = C_1(\epsilon) =  w_1(\epsilon) + A k^\
 \frac{c_1^2(\epsilon)}{c_1^1(\epsilon)} &amp; = \frac{c_0^2}{c_0^1} = \frac{1-\eta}{\eta}
 \end{aligned}
 \]</div>
-<p>for some <span class="math notranslate nohighlight">\(\eta \in (0,1)\)</span> where <span class="math notranslate nohighlight">\(\eta\)</span> depends on consumers’
+<p>for an <span class="math notranslate nohighlight">\(\eta \in (0,1)\)</span> that  depends on consumers’
 endowments
 <span class="math notranslate nohighlight">\([w_0^1, w_0^2, w_1^1(\epsilon), w_1^2(\epsilon), \theta_0^1, \theta_0^2 ]\)</span>.</p>
-<p><strong>Remark:</strong> There are multiple arrangements of endowments
+<p><strong>Remark:</strong> Multiple arrangements of endowments
 <span class="math notranslate nohighlight">\([w_0^1, w_0^2, w_1^1(\epsilon), w_1^2(\epsilon), \theta_0^1, \theta_0^2 ]\)</span>
-that are associated with the same <span class="math notranslate nohighlight">\(\eta\)</span>.</p>
-<p>Can you explain why?</p>
-<p><strong>Hint:</strong> it is linked to the portfolio indeterminacy finding above.</p>
+associated with the same <span class="math notranslate nohighlight">\(\eta\)</span>. Can you explain why?
+<strong>Hint:</strong> Think about the portfolio indeterminacy finding above.</p>
 </div>
 <div class="section" id="modigliani-miller-theorem">
 <h3><span class="section-number">9.2.6. </span>Modigliani-Miller theorem<a class="headerlink" href="#modigliani-miller-theorem" title="Permalink to this headline">¶</a></h3>
-<p>Assume now that the firm issues both bonds and equity.</p>
+<p>Now allow a firm to issue both bonds and equity.</p>
 <p>Payouts from equity and bonds, respectively, are</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-d^e(k,B;\epsilon) &amp;= \max \left\{ e^\epsilon A k^\alpha - B, 0 \right\} \\
-d^b(k,B;\epsilon) &amp;= \min \left\{ \frac{e^\epsilon A k^\alpha}{B}, 1 \right\}
+d^e(k,b;\epsilon) &amp;= \max \left\{ e^\epsilon A k^\alpha - b, 0 \right\} \\
+d^b(k,b;\epsilon) &amp;= \min \left\{ \frac{e^\epsilon A k^\alpha}{b}, 1 \right\}
 \end{aligned}
 \end{split}\]</div>
-<p>Thus, one unit of the bond pays <span class="math notranslate nohighlight">\(1\)</span> units of consumption at time
+<p>Thus, one unit of the bond pays <span class="math notranslate nohighlight">\(1\)</span> unit of consumption at time
 <span class="math notranslate nohighlight">\(1\)</span> in state <span class="math notranslate nohighlight">\(\epsilon\)</span> if
-<span class="math notranslate nohighlight">\(A k^\alpha e^\epsilon - B \geq 0\)</span>, which is true when
-<span class="math notranslate nohighlight">\(\epsilon \geq \epsilon^* = \log \frac{B}{Ak^\alpha}\)</span>, and pays
-<span class="math notranslate nohighlight">\(\frac{A k^\alpha e^\epsilon}{B}\)</span> units of time <span class="math notranslate nohighlight">\(1\)</span>
+<span class="math notranslate nohighlight">\(A k^\alpha e^\epsilon - b \geq 0\)</span>, which is true when
+<span class="math notranslate nohighlight">\(\epsilon \geq \epsilon^* = \log \frac{b}{Ak^\alpha}\)</span>, and pays
+<span class="math notranslate nohighlight">\(\frac{A k^\alpha e^\epsilon}{b}\)</span> units of time <span class="math notranslate nohighlight">\(1\)</span>
 consumption in state <span class="math notranslate nohighlight">\(\epsilon\)</span> when
 <span class="math notranslate nohighlight">\(\epsilon &lt; \epsilon^*\)</span>.</p>
 <p>The value of the firm is now the sum of equity plus the value of bonds,
 which we denote</p>
 <div class="math notranslate nohighlight">
 \[
-\tilde V + B p(k,B)
+\tilde V + b p(k,b)
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(p(k,B)\)</span> is the price of one unit of the bond when a firm
-with <span class="math notranslate nohighlight">\(k\)</span> units of physical capital issues <span class="math notranslate nohighlight">\(B\)</span> bonds.</p>
+<p>where <span class="math notranslate nohighlight">\(p(k,b)\)</span> is the price of one unit of the bond when a firm
+with <span class="math notranslate nohighlight">\(k\)</span> units of physical capital issues <span class="math notranslate nohighlight">\(b\)</span> bonds.</p>
 <p>We continue to assume that there are complete markets in Arrow
 securities with pricing kernel <span class="math notranslate nohighlight">\(q(\epsilon)\)</span>.</p>
-<p>The same type of no-arbitrage-in-equilibrium argument that we presented
+<p>A version of the  no-arbitrage-in-equilibrium argument that we presented
 earlier implies that the value of equity and the price of bonds are</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{aligned}
-\tilde V &amp; = A k^\alpha \int_{\epsilon^*}^\infty e^\epsilon q(\epsilon) d \epsilon - B \int_{\epsilon^*}^\infty  q(\epsilon) d \epsilon\cr
-p(k, B) &amp; =   \frac{A k^\alpha}{B} \int_{-\infty}^{\epsilon^*} e^\epsilon q(\epsilon) d \epsilon
+\tilde V &amp; = A k^\alpha \int_{\epsilon^*}^\infty e^\epsilon q(\epsilon) d \epsilon - b \int_{\epsilon^*}^\infty  q(\epsilon) d \epsilon\cr
+p(k, b) &amp; =   \frac{A k^\alpha}{B} \int_{-\infty}^{\epsilon^*} e^\epsilon q(\epsilon) d \epsilon
       + \int_{\epsilon^*}^\infty q(\epsilon) d \epsilon
 \end{aligned}
 \]</div>
-<p>The value of the firm is</p>
+<p>Consequently, the value of the firm is</p>
 <div class="math notranslate nohighlight">
 \[
-\tilde V + p(k,B) B =  A k^\alpha \int_{-\infty}^\infty e^\epsilon q(\epsilon) d \epsilon,
+\tilde V + p(k,b) b =  A k^\alpha \int_{-\infty}^\infty e^\epsilon q(\epsilon) d \epsilon,
 \]</div>
 <p>which is the same expression that we obtained above when we assumed that
 the firm issued only equity.</p>
@@ -1947,8 +1207,8 @@ the firm issued only equity.</p>
 about firms’ finance:</p>
 <p><strong>Modigliani-Miller theorem:</strong></p>
 <ul class="simple">
-<li><p>The value of the firm is independent the mix of equity and bonds that
-the firm uses to finance its physical capital.</p></li>
+<li><p>The value of a firm is independent the mix of equity and bonds that
+it uses to finance its physical capital.</p></li>
 <li><p>The firms’s decision of how much physical capital to purchase does
 not depend on whether it finances capital purchases by issuing bonds
 or equity</p></li>
@@ -1957,105 +1217,90 @@ bonds is indeterminant</p></li>
 </ul>
 <p>Please note the role of the assumption of complete markets in Arrow
 securities in substantiating these claims.</p>
-<p>In a subsequent lecture, we will assume that markets are (very)
-incomplete – we’ll shut down markets in all Arrow securities.</p>
+<p>In <a class="reference internal" href="BCG_incomplete_mkts.html"><span class="doc">Equilibrium Capital Structures with Incomplete Markets</span></a>, we will assume that markets are (very)
+incomplete – we’ll shut down markets in almost all Arrow securities.</p>
 <p>That will pull the rug from underneath the Modigliani-Miller theorem.</p>
 </div>
 </div>
 <div class="section" id="code">
 <h2><a class="toc-backref" href="#id7"><span class="section-number">9.3. </span>Code</a><a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
-<p>We create a class object <code class="docutils literal notranslate"><span class="pre">BCG_complete_markets</span></code> to compute the
-equilibrium allocations of the complete market BCG model, given the set
+<p>We create a class object <code class="docutils literal notranslate"><span class="pre">BCG_complete_markets</span></code> to compute
+equilibrium allocations of the complete market BCG model given a list
 of parameter values.</p>
-<p>It consistx of 4 functions:</p>
-<ol>
-<li><p><code class="docutils literal notranslate"><span class="pre">opt_k</span></code> solves the optimal capital <span class="math notranslate nohighlight">\(k\)</span></p>
+<p>It consists of 4 functions that do the following things:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">opt_k</span></code> computes the planner’s optimal capital <span class="math notranslate nohighlight">\(K\)</span></p>
 <ul>
 <li><p>First, create a grid for capital.</p></li>
-<li><p>Then for each value of capital stock in the grid, compute the LHS
-of the FONC of <span class="math notranslate nohighlight">\(k\)</span>, that is,</p>
+<li><p>Then for each value of capital stock in the grid, compute the left side of the planner’s
+first-order necessary condition for  <span class="math notranslate nohighlight">\(k\)</span>, that is,</p>
 <div class="math notranslate nohighlight">
 \[
-      \beta \alpha A K^{\alpha -1} \int \left( \frac{w_1(\epsilon) + A K^\alpha e^\epsilon}{w_0 - K } \right)^{-\gamma} g(\epsilon) d \epsilon  - 1
+      \beta \alpha A K^{\alpha -1} \int \left( \frac{w_1(\epsilon) + A K^\alpha e^\epsilon}{w_0 - K } \right)^{-\gamma} g(\epsilon) d \epsilon  - 1 =0
       \]</div>
 </li>
-<li><p>Then search for the capital that makes the LHS value above equal
-to zero.</p></li>
+<li><p>Find <span class="math notranslate nohighlight">\(k\)</span> that solves this equation.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">q</span></code> outputs the Arrow security price as a function of productivity
-shock <span class="math notranslate nohighlight">\(\epsilon\)</span> and capital <span class="math notranslate nohighlight">\(K\)</span></p>
-<ul class="simple">
-<li><p>That is</p></li>
-</ul>
-</li>
-<li><div class="math notranslate nohighlight">
-\[
-   q(\epsilon;K) = \beta \left( \frac{u'\left( w_1(\epsilon) + A K^\alpha e^\epsilon\right)} {u'(w_0 - K )} \right)
-   \]</div>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">V</span></code> solves for the firm value given capital <span class="math notranslate nohighlight">\(k\)</span></p>
-<ul>
-<li><p>That is</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">q</span></code> computes Arrow security prices as a function of the productivity shock <span class="math notranslate nohighlight">\(\epsilon\)</span> and capital <span class="math notranslate nohighlight">\(K\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-      V = - k + \int A k^\alpha e^\epsilon q(\epsilon; K) d \epsilon
-      \]</div>
+  q(\epsilon;K) = \beta \left( \frac{u'\left( w_1(\epsilon) + A K^\alpha e^\epsilon\right)} {u'(w_0 - K )} \right)
+  \]</div>
 </li>
-</ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">V</span></code> solves for the firm value given capital <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+  V = - k + \int A k^\alpha e^\epsilon q(\epsilon; K) d \epsilon
+  \]</div>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">opt_c</span></code> solves the optimal consumption <span class="math notranslate nohighlight">\(c^i_0\)</span>, and
-<span class="math notranslate nohighlight">\(c^i(\epsilon)\)</span>.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">opt_c</span></code> computes optimal consumptions <span class="math notranslate nohighlight">\(c^i_0\)</span>, and <span class="math notranslate nohighlight">\(c^i(\epsilon)\)</span>:</p>
 <ul>
-<li><p>First, the function compute the weight <span class="math notranslate nohighlight">\(\eta\)</span> using the
-intertemporal budget constraint for agent 1:</p>
+<li><p>The function first computes weight <span class="math notranslate nohighlight">\(\eta\)</span> using the
+budget constraint for agent 1:</p>
 <div class="math notranslate nohighlight">
 \[
       w_0^1 + \theta_0^1 V + \int w_1^1(\epsilon) q(\epsilon) d \epsilon
       = c_0^1 + \int c_1^1(\epsilon) q(\epsilon) d \epsilon
       = \eta \left( C_0 + \int C_1(\epsilon) q(\epsilon) d \epsilon \right)
       \]</div>
-</li>
-</ul>
-</li>
-<li><p>where</p>
+<p>where</p>
 <div class="math notranslate nohighlight">
 \[
-   \begin{aligned}
-   C_0 &amp; = w_0 - K \cr
-   C_1(\epsilon) &amp; = w_1(\epsilon) + A K^\alpha e^\epsilon \cr
-   \end{aligned}
-   \]</div>
-<ul class="simple">
-<li><p>Next, compute the consumption for each agent as</p></li>
+      \begin{aligned}
+      C_0 &amp; = w_0 - K \cr
+      C_1(\epsilon) &amp; = w_1(\epsilon) + A K^\alpha e^\epsilon \cr
+      \end{aligned}
+      \]</div>
+</li>
+<li><p>It computes consumption for each agent as</p></li>
 </ul>
 </li>
 <li><div class="math notranslate nohighlight">
 \[
-   \begin{aligned}
-   c_0^1 &amp; = \eta C_0 \cr
-   c_0^2 &amp; = (1 - \eta) C_0 \cr
-   c_1^1(\epsilon) &amp; = \eta C_1 (\epsilon) \cr
-   c_1^2 (\epsilon) &amp; = (1 - \eta) C_1(\epsilon)
-   \end{aligned}
-   \]</div>
+  \begin{aligned}
+  c_0^1 &amp; = \eta C_0 \cr
+  c_0^2 &amp; = (1 - \eta) C_0 \cr
+  c_1^1(\epsilon) &amp; = \eta C_1 (\epsilon) \cr
+  c_1^2 (\epsilon) &amp; = (1 - \eta) C_1(\epsilon)
+  \end{aligned}
+  \]</div>
 </li>
-</ol>
-<p>The set of parameters include:</p>
+</ul>
+<p>The list of parameters includes:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\chi_1\)</span>, <span class="math notranslate nohighlight">\(\chi_2\)</span>: Correlation parameters for agents 1
 and 2. Default values are 0 and 0.9, respectively.</p></li>
-<li><p><span class="math notranslate nohighlight">\(w^1_0\)</span>, <span class="math notranslate nohighlight">\(w^2_0\)</span>: Initial endowments. Default values are
-1.</p></li>
+<li><p><span class="math notranslate nohighlight">\(w^1_0\)</span>, <span class="math notranslate nohighlight">\(w^2_0\)</span>: Initial endowments. Default values are 1.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\theta^1_0\)</span>, <span class="math notranslate nohighlight">\(\theta^2_0\)</span>: Consumers’ initial shares of
 a representative firm. Default values are 0.5.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\psi\)</span>: CRRA risk parameter. Default value is 3.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\alpha\)</span>: Returns to scale production function parameter.
 Default value is 0.6.</p></li>
 <li><p><span class="math notranslate nohighlight">\(A\)</span>: Productivity of technology. Default value is 2.5.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mu\)</span>, <span class="math notranslate nohighlight">\(\sigma\)</span>: Mean and standard deviation of the shock
-distribution. Default values are -0.025 and 0.4, respectively.</p></li>
-<li><p><span class="math notranslate nohighlight">\(beta\)</span>: time preference discount factor. Default value is .96.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span>, <span class="math notranslate nohighlight">\(\sigma\)</span>: Mean and standard deviation of the log of the shock.
+Default values are -0.025 and 0.4, respectively.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\beta\)</span>: time preference discount factor. Default value is .96.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nb_points_integ</span></code>: number of points used for integration through
 Gauss-Hermite quadrature: default value is 10</p></li>
 </ul>
@@ -2268,13 +1513,12 @@ Gauss-Hermite quadrature: default value is 10</p></li>
 <p>Below we provide some examples of how to use <code class="docutils literal notranslate"><span class="pre">BCG_complete</span> <span class="pre">markets</span></code>.</p>
 <div class="section" id="st-example">
 <h4><span class="section-number">9.3.1.1. </span>1st example<a class="headerlink" href="#st-example" title="Permalink to this headline">¶</a></h4>
-<p>In the first example, we set up instances of the BCG complete markets
-model.</p>
+<p>In the first example, we set up instances of  BCG complete markets
+models.</p>
 <p>We can use either default parameter values or set parameter values as we
 want.</p>
 <p>The two instances of the BCG complete markets model, <code class="docutils literal notranslate"><span class="pre">mdl1</span></code> and
-<code class="docutils literal notranslate"><span class="pre">mdl2</span></code>, represent the model with default parameter settings and with a
-change of agent 2’s income correlation <span class="math notranslate nohighlight">\(\chi_2 = -0.9\)</span>,
+<code class="docutils literal notranslate"><span class="pre">mdl2</span></code>, represent the model with default parameter settings and with  agent 2’s income correlation altered to be <span class="math notranslate nohighlight">\(\chi_2 = -0.9\)</span>,
 respectively.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2294,7 +1538,7 @@ the difference in the two models:</p>
 <span class="n">epsgrid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
 
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epsgrid</span><span class="p">,</span> <span class="n">mdl1</span><span class="o">.</span><span class="n">w11</span><span class="p">(</span><span class="n">epsgrid</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Agent 1</span><span class="se">\&#39;</span><span class="s1">s endowment&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epsgrid</span><span class="p">,</span> <span class="n">mdl1</span><span class="o">.</span><span class="n">w21</span><span class="p">(</span><span class="n">epsgrid</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Agent 2</span><span class="se">\&#39;</span><span class="s1">s endowment&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epsgrid</span><span class="p">,</span> <span class="n">mdl1</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="n">epsgrid</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Production with $k=1$&#39;</span><span class="p">)</span>
@@ -2396,8 +1640,8 @@ is influenced by the correlation parameter <span class="math notranslate nohighl
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 2.37 s, sys: 12.9 ms, total: 2.38 s
-Wall time: 2.35 s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 2.58 s, sys: 28.5 ms, total: 2.61 s
+Wall time: 2.6 s
 </pre></div>
 </div>
 </div>
@@ -2411,8 +1655,8 @@ Wall time: 2.35 s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 45.7 ms, sys: 683 µs, total: 46.3 ms
-Wall time: 8.17 ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 45.4 ms, sys: 886 µs, total: 46.3 ms
+Wall time: 7.83 ms
 </pre></div>
 </div>
 </div>
@@ -2543,7 +1787,7 @@ Wall time: 8.17 ms
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   9. Capital Structures in a Complete Markets Economy
+   9. Irrelevance of Capital Structures with Complete Markets
   </a>
  </li>
  <li class="toctree-l1">
