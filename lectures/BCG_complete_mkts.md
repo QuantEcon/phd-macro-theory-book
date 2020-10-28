@@ -65,7 +65,7 @@ A Big K, little k analysis also played roles in [this quantecon lecture](https:/
 
 The economy lasts for two periods, $t=0, 1$.
 
-There are unit measure continua  of two types of consumers named $i=1,2$.
+There are two types of consumers named :math:`i=1,2`
 
 A scalar random variable $\epsilon$ with probability density $g(\epsilon)$ affects both
 
