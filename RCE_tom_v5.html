@@ -1,0 +1,1255 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Competitive equilibrium with one-period Arrow securities &#8212; PhD Macro with Python</title>
+    <link rel="stylesheet" href="_static/quantecon-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/quantecon-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/quantecon-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Asset Pricing: Finite State Models" href="markov_asset.html" />
+    <link rel="prev" title="PhD Macro with Python" href="intro.html" />
+
+<!-- Normal Meta Tags -->
+<meta name="author" context="Thomas J. Sargent &amp; John Stachurski" />
+<meta name="keywords" content="" />
+<meta name="description" content=Competitive equilibrium with one-period Arrow securities  This notebook is a laboratory for experimenting with instances of  a pure exchange economy with  Marko />
+
+<!-- Twitter tags -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:title" content="Competitive equilibrium with one-period Arrow securities"/>
+<meta name="twitter:description" content="Competitive equilibrium with one-period Arrow securities  This notebook is a laboratory for experimenting with instances of  a pure exchange economy with  Marko">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:image" content="">
+
+<!-- Opengraph tags -->
+<meta property="og:title" content="Competitive equilibrium with one-period Arrow securities" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="None" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="Competitive equilibrium with one-period Arrow securities  This notebook is a laboratory for experimenting with instances of  a pure exchange economy with  Marko" />
+<meta property="og:site_name" content="PhD Macro with Python" />
+
+<meta name="theme-color" content="#ffffff" />
+
+
+  </head>
+<body>
+
+
+    <span id="top"></span>
+
+    <div class="wrapper">
+
+        <div class="main">
+
+            <div class="page">
+
+                <div class="page__toc">
+
+                    <div class="inner">
+
+                        
+                        <div class="page__toc-header">
+                            On this page
+                        </div>
+
+
+                        <nav id="bd-toc-nav" class="page__toc-nav">
+
+                            <ul class="nav section-nav flex-column">
+                                
+                                <li class="nav-item toc-entry toc-h2">
+                                    <a href="#markov-asset-prices-primer" class="nav-link">Markov asset prices primer</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h2">
+                                    <a href="#general-equilibrium-model-pure-exchange" class="nav-link">General equilibrium model (pure exchange)</a><ul class="nav section-nav flex-column">
+                                        
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#inputs" class="nav-link">Inputs</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#outputs" class="nav-link">Outputs</a><ul class="nav section-nav flex-column">
+                                        
+                                <li class="nav-item toc-entry toc-h4">
+                                    <a href="#matrix-q-to-represent-pricing-kernel" class="nav-link">Matrix Q to represent pricing kernel</a>
+                                </li>
+                                
+                                    </ul>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#values" class="nav-link">Values</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#continuation-wealths" class="nav-link">Continuation wealths</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#optimal-portfolios" class="nav-link">Optimal portfolios</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#equilibrium-wealth-distribution-alpha" class="nav-link">Equilibrium wealth distribution \alpha</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#example-1" class="nav-link">Example 1</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#example-2" class="nav-link">Example 2</a>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h3">
+                                    <a href="#example-3" class="nav-link">Example 3</a>
+                                </li>
+                                
+                                    </ul>
+                                </li>
+                                
+                                <li class="nav-item toc-entry toc-h2">
+                                    <a href="#example-4" class="nav-link">Example 4</a>
+                                </li>
+                                
+                            </ul>
+
+                            <p class="logo">
+                                
+                                    
+                                    <a href=intro.html><img src="_static/qe-logo-large.png" class="logo" alt="logo"></a>
+                                    
+                                
+                            </p>
+
+                            <p class="powered">Powered by <a href="https://jupyterbook.org/">Jupyter Book</a></p>
+
+                        </nav>
+
+                        <div class="page__toc-footer">
+                            
+                            
+                            <p><a href="#top"><strong>Back to top</strong></a></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="page__header">
+
+                    <div class="page__header-copy">
+
+                        <p class="page__header-heading"><a href="intro.html">PhD Macro with Python</a></p>
+
+                        <p class="page__header-subheading">Competitive equilibrium with one-period Arrow securities</p>
+
+                    </div>
+
+                    <p class="page__header-authors">Thomas J. Sargent & John Stachurski</p>
+
+                </div> <!-- .page__header -->
+
+
+
+                
+                <main class="page__content" role="main">
+                    
+                    <div>
+                        
+  <div class="section" id="competitive-equilibrium-with-one-period-arrow-securities">
+<h1><span class="section-number">1. </span>Competitive equilibrium with one-period Arrow securities<a class="headerlink" href="#competitive-equilibrium-with-one-period-arrow-securities" title="Permalink to this headline">¶</a></h1>
+<p>This notebook is a laboratory for experimenting with instances of  a pure exchange economy with</p>
+<ul class="simple">
+<li><p>Markov endowments</p></li>
+<li><p>Complete markets in one period Arrow state-contingent securities</p></li>
+<li><p>Discounted expected utility preferences  of a kind often specified in macro and finance</p></li>
+<li><p>Common preferences across agents</p></li>
+<li><p>Common beliefs across agents</p></li>
+<li><p>A CRRA one-period utility function that implies the existence of a representative consumer whose consumption process can be plugged into a formula for the pricing kernel for  one-step Arrow securities and thereby determine equilbrium prices before determing an equilibrium distribution of wealth</p></li>
+<li><p>Diverse endowments across agents that provide motivations for reallocating goods across time and Markov states</p></li>
+</ul>
+<p>We impose  enough restrictions to allow us to <strong>Bellmanize</strong> competitive equilibrium prices and quantities</p>
+<p>This lets us use  Bellman equations  to compute</p>
+<ul class="simple">
+<li><p>asset prices</p></li>
+<li><p>continuation wealths</p></li>
+<li><p>state-by-state natural debt limits</p></li>
+</ul>
+<p>As usual, we start with Python imports</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="markov-asset-prices-primer">
+<h2><span class="section-number">1.1. </span>Markov asset prices primer<a class="headerlink" href="#markov-asset-prices-primer" title="Permalink to this headline">¶</a></h2>
+<p>Let’s start with a brief summary of formulas for computing asset prices in
+a Markov setting.</p>
+<p>The setup assumes the following infrastructure</p>
+<ul class="simple">
+<li><p>Markov states: <span class="math notranslate nohighlight">\(s \in S = \left[\bar{s}_1, \ldots, \bar{s}_n \right]\)</span> governed by  an <span class="math notranslate nohighlight">\(n\)</span>-state Markov chain with transition probability</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P_{ij} = \Pr \left\{s_{t+1} = \bar{s}_j \mid s_t = \bar{s}_i \right\}
+\]</div>
+<ul class="simple">
+<li><p>A collection <span class="math notranslate nohighlight">\(k=1,\ldots, I\)</span> of  <span class="math notranslate nohighlight">\(n \times 1\)</span> vectors of  <span class="math notranslate nohighlight">\(K\)</span> assets that pay off  <span class="math notranslate nohighlight">\(d^k\left(s\right)\)</span>  in state <span class="math notranslate nohighlight">\(s\)</span></p></li>
+<li><p>An <span class="math notranslate nohighlight">\(n \times n\)</span> matrix  pricing kernel <span class="math notranslate nohighlight">\(Q\)</span> for one-period Arrow securities, where <span class="math notranslate nohighlight">\( Q_{ij}\)</span>  = price at time <span class="math notranslate nohighlight">\(t\)</span> in state <span class="math notranslate nohighlight">\(s_t 
+\bar s_i\)</span> of one unit of consumption when <span class="math notranslate nohighlight">\(s_{t+1} = \bar s_j\)</span> at time <span class="math notranslate nohighlight">\(t+1\)</span></p></li>
+</ul>
+<p>At this point, we’ll take the pricing kernel <span class="math notranslate nohighlight">\(Q\)</span> as exogenous, i.e., determined outside the model</p>
+<p>Two examples would be</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( Q = \beta P \)</span> where <span class="math notranslate nohighlight">\(\beta \in (0,1) \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(Q = S P \)</span> where <span class="math notranslate nohighlight">\(S\)</span> is an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix of <em>stochastic discount factors</em></p></li>
+</ul>
+<p>We’ll write down implications of  Markov asset pricing in a nutshell for two types of assets</p>
+<ul class="simple">
+<li><p>the price in Markov state <span class="math notranslate nohighlight">\(s\)</span> at time <span class="math notranslate nohighlight">\(t\)</span> of a <strong>cum dividend</strong> stock that entitles the owner at the beginning of time <span class="math notranslate nohighlight">\(t\)</span> to the time <span class="math notranslate nohighlight">\(t\)</span> dividend and the option to sell the asset at time <span class="math notranslate nohighlight">\(t+1\)</span>.  The price evidently satisfies <span class="math notranslate nohighlight">\(p^k(\bar s_i) = d^k(\bar s_i) + \sum_j Q_{ij} p^k(\bar s_j) \)</span> which implies that the vector <span class="math notranslate nohighlight">\(p^k\)</span> satisfies <span class="math notranslate nohighlight">\(p^k = d^k + Q p^k\)</span> which implies the formula</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+p^k = (I - Q)^{-1} d^k
+\]</div>
+<ul class="simple">
+<li><p>the price in Markov state <span class="math notranslate nohighlight">\(s\)</span> at time <span class="math notranslate nohighlight">\(t\)</span> of an <strong>ex dividend</strong> stock that entitles the owner at the end  of time <span class="math notranslate nohighlight">\(t\)</span> to the time <span class="math notranslate nohighlight">\(t+1\)</span> dividend and the option to sell the stock at time <span class="math notranslate nohighlight">\(t+1\)</span>. The  price is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ 
+p^k = (I - Q)^{-1} d^k
+\]</div>
+<p>Below, we describe an equilibrium model with trading of one-period Arrow securities in which the pricing kernel is endogenous.</p>
+<p>In constructing our model, we’ll repeatedly encounter formulas that remind us of our asset pricing formulas.</p>
+<p><strong>Apology:</strong> below we’ll recycle notation by using <span class="math notranslate nohighlight">\(i\)</span> both as a subscript of the Markov
+state <span class="math notranslate nohighlight">\(\bar s_i\)</span> and as the name of an individual consumer.  We hope that this does not cause undue confusion.</p>
+</div>
+<div class="section" id="general-equilibrium-model-pure-exchange">
+<h2><span class="section-number">1.2. </span>General equilibrium model (pure exchange)<a class="headerlink" href="#general-equilibrium-model-pure-exchange" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="inputs">
+<h3><span class="section-number">1.2.1. </span>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Markov states: <span class="math notranslate nohighlight">\(s \in S = \left[\bar{s}_1, \ldots, \bar{s}_n \right]\)</span> governed by  an <span class="math notranslate nohighlight">\(n\)</span>-state Markov chain with transition probability</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P_{ij} = \Pr \left\{s_{t+1} = \bar{s}_j \mid s_t = \bar{s}_i \right\}
+\]</div>
+<ul class="simple">
+<li><p>A collection of  <span class="math notranslate nohighlight">\(n \times 1\)</span> vectors of individual <span class="math notranslate nohighlight">\(i\)</span> endowments: <span class="math notranslate nohighlight">\(y^i\left(s\right), i=1,\ldots, I\)</span></p></li>
+<li><p>An <span class="math notranslate nohighlight">\(n \times 1\)</span> vector of aggregate endowment:  <span class="math notranslate nohighlight">\(y\left(s\right) \equiv \sum_{i=1}^I y^i\left(s\right)\)</span></p></li>
+<li><p>A collection of  <span class="math notranslate nohighlight">\(n \times 1\)</span> vectors of individual <span class="math notranslate nohighlight">\(i\)</span> consumptions: <span class="math notranslate nohighlight">\(c^i\left(s\right), i=1,\ldots, I\)</span></p></li>
+<li><p>A collection of restrictions  on feasible consumption allocations for <span class="math notranslate nohighlight">\(s \in S\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+c\left(s\right)= \sum_{i=1}^I c^i\left(s\right) 
+\leq  y\left(s\right) 
+\]</div>
+<ul class="simple">
+<li><p>Preferences: a common utility functional across agents <span class="math notranslate nohighlight">\( E_0 \sum_{t=0}^\infty \beta^t u(c^i_t) \)</span> with  CRRA one-period utility function <span class="math notranslate nohighlight">\(u\left(c\right)\)</span> and discount factor <span class="math notranslate nohighlight">\(\beta \in (0,1)\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="outputs">
+<h3><span class="section-number">1.2.2. </span>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>An <span class="math notranslate nohighlight">\(n \times n\)</span> matrix  pricing kernel <span class="math notranslate nohighlight">\(Q\)</span> for one-period Arrow securities, where <span class="math notranslate nohighlight">\( Q_{ij}\)</span>  = price at time <span class="math notranslate nohighlight">\(t\)</span> in state <span class="math notranslate nohighlight">\(s_t 
+\bar s_i\)</span> of one unit of consumption when <span class="math notranslate nohighlight">\(s_{t+1} = \bar s_j\)</span> at time <span class="math notranslate nohighlight">\(t+1\)</span></p></li>
+<li><p>pure exchange so that <span class="math notranslate nohighlight">\(c\left(s\right) = y\left(s\right)\)</span></p></li>
+<li><p>an <span class="math notranslate nohighlight">\(I \times 1\)</span> vector distribution of wealth vector <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\alpha_i \geq 0, \sum_{i=1}^I \alpha_i =1\)</span></p></li>
+<li><p>A collection of <span class="math notranslate nohighlight">\(n \times 1\)</span> vectors of individual <span class="math notranslate nohighlight">\(i\)</span> consumptions: <span class="math notranslate nohighlight">\(c^i\left(s\right), i=1,\ldots, I\)</span></p></li>
+</ul>
+<p>The one-period utility function is</p>
+<div class="math notranslate nohighlight">
+\[
+u \left(c\right) = \frac{c^{1-\gamma}}{1-\gamma}
+\]</div>
+<p>so that</p>
+<div class="math notranslate nohighlight">
+\[
+u^\prime \left(c\right) = c^{-\gamma}
+\]</div>
+<div class="section" id="matrix-q-to-represent-pricing-kernel">
+<h4><span class="section-number">1.2.2.1. </span>Matrix <span class="math notranslate nohighlight">\(Q\)</span> to represent pricing kernel<a class="headerlink" href="#matrix-q-to-represent-pricing-kernel" title="Permalink to this headline">¶</a></h4>
+<p>For any agent  <span class="math notranslate nohighlight">\(k \in \left[1, \ldots, I\right]\)</span>, at the equilibrium allocation,
+the one-period Arrow securities pricing kernel satisfies</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{ij} = \beta \left(\frac{c^k\left(\bar{s}_j\right)}{c^k\left(\bar{s}_i\right)}\right)^{-\gamma} P_{ij}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q\)</span> is an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix</p>
+<p>This follows from agent <span class="math notranslate nohighlight">\(k\)</span>’s first-order necessary conditions.</p>
+<p>But with the CRRA preferences that we have assumed, individual consumptions vary proportionately
+with aggregate consumption and therefore with the aggregate endowment.</p>
+<ul class="simple">
+<li><p>This is a consequence of our preference specification implying that <strong>Engle curves</strong> affine in wealth and therefore  satisfy conditions for <strong>Gorman aggregation</strong></p></li>
+</ul>
+<p>Thus,</p>
+<div class="math notranslate nohighlight">
+\[
+c^i \left(s\right) = \alpha_i c\left(s\right) = \alpha_i y\left(s\right)
+\]</div>
+<p>for an arbitrary   <strong>distribution of wealth</strong>  in the form of an   <span class="math notranslate nohighlight">\(I \times 1\)</span> vector <span class="math notranslate nohighlight">\(\alpha\)</span>
+that satisfies</p>
+<div class="math notranslate nohighlight">
+\[ \alpha_i \in \left(0, 1\right), \quad \sum_{i=1}^I \alpha_i = 1 \]</div>
+<p>This means that we can compute the pricing kernel from</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{ij} = \beta \left(\frac{y_j}{y_i}\right)^{-\gamma} P_{ij}
+\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(Q_{ij}\)</span> is independent of vector <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>Thus, we have the</p>
+<p><strong>Key finding:</strong> We can compute competitive equilibrium prices prior to computing the distribution of wealth.</p>
+</div>
+</div>
+<div class="section" id="values">
+<h3><span class="section-number">1.2.3. </span>Values<a class="headerlink" href="#values" title="Permalink to this headline">¶</a></h3>
+<p>Having computed an equilibrium pricing kernel <span class="math notranslate nohighlight">\(Q\)</span>, we can compute several <strong>values</strong> that are required
+to pose or represent the solution of an individual household’s optimum problem.</p>
+<p>We denote  an <span class="math notranslate nohighlight">\(I \times 1\)</span> vector of  state-dependent values of agents’ endowments in Markov state <span class="math notranslate nohighlight">\(s\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\left(s\right)=\left[\begin{array}{c}
+A^{1}\left(s\right)\\
+ \vdots\\
+A^{I}\left(s\right)
+\end{array}\right], \quad s \in \left[\bar{s}_1, \ldots, \bar{s}_n\right]
+\end{split}\]</div>
+<p>and an  <span class="math notranslate nohighlight">\(n \times 1\)</span> vector of continuation endowment values for each individual <span class="math notranslate nohighlight">\(i\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{i}=\left[\begin{array}{c}
+A^{i}\left(\bar{s}_{1}\right)\\
+\vdots\\
+A^{i}\left(\bar{s}_{n}\right)
+\end{array}\right], \quad i \in \left[1, \ldots, I\right]
+\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(A^i\)</span> of consumer <span class="math notranslate nohighlight">\(i\)</span> satisfies</p>
+<div class="math notranslate nohighlight">
+\[
+A^i = \left[I - Q\right]^{-1} \left[ y^i\right]
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+y^{i}=\left[\begin{array}{c}
+y^{i}\left(\bar{s}_{1}\right)\\
+\vdots\\
+y^{i}\left(\bar{s}_{n}\right)
+\end{array}\right]
+\end{split}\]</div>
+<p>In a competitive equilibrium with sequential trading of one-period Arrow securities,
+<span class="math notranslate nohighlight">\(A^i(s)\)</span> serves as a state-by-state vector of <strong>debt limits</strong> on the quantities of one-period  Arrow securities
+paying off  in state <span class="math notranslate nohighlight">\(s\)</span> at time <span class="math notranslate nohighlight">\(t+1\)</span> that individual <span class="math notranslate nohighlight">\(i\)</span> can issue at time <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>These are often called <strong>natural debt limits</strong>.</p>
+<p>Evidently, they equal the maximum amount that it is feasible for  individual <span class="math notranslate nohighlight">\(i\)</span> to repay
+even if he consumes zero goods forevermore.</p>
+</div>
+<div class="section" id="continuation-wealths">
+<h3><span class="section-number">1.2.4. </span>Continuation wealths<a class="headerlink" href="#continuation-wealths" title="Permalink to this headline">¶</a></h3>
+<p>Continuation wealths play an important role in Bellmanizing a competitive equilibrium with sequential
+trading of a complete set of one-period Arrow securities.</p>
+<p>We denote  an <span class="math notranslate nohighlight">\(I \times 1\)</span> vector of  state-dependent continuation wealths in Markov state <span class="math notranslate nohighlight">\(s\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\psi\left(s\right)=\left[\begin{array}{c}
+\psi^{1}\left(s\right)\\
+\vdots\\
+\psi^{I}\left(s\right)
+\end{array}\right], \quad s \in \left[\bar{s}_1, \ldots, \bar{s}_n\right]
+\end{split}\]</div>
+<p>and an  <span class="math notranslate nohighlight">\(n \times 1\)</span> vector of continuation wealths for each individual <span class="math notranslate nohighlight">\(i\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\psi^{i}=\left[\begin{array}{c}
+\psi^{i}\left(\bar{s}_{1}\right)\\
+\vdots\\
+\psi^{i}\left(\bar{s}_{n}\right)
+\end{array}\right], \quad i \in \left[1, \ldots, I\right]
+\end{split}\]</div>
+<p>Continuation wealth  <span class="math notranslate nohighlight">\(\psi^i\)</span> of consumer <span class="math notranslate nohighlight">\(i\)</span> satisfies</p>
+<div class="math notranslate nohighlight">
+\[
+\psi^i = \left[I - Q\right]^{-1} \left[\alpha^i y - y^i\right]
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+y^{i}=\left[\begin{array}{c}
+y^{i}\left(\bar{s}_{1}\right)\\
+\vdots\\
+y^{i}\left(\bar{s}_{n}\right)
+\end{array}\right],\quad y=\left[\begin{array}{c}
+y\left(\bar{s}_{1}\right)\\
+\vdots\\
+y\left(\bar{s}_{n}\right)
+\end{array}\right]
+\end{split}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(\sum_{i=1}^I \psi^i = \boldsymbol{0}_{n \times 1}\)</span>.</p>
+<p><strong>Remark:</strong> At the initial state <span class="math notranslate nohighlight">\(s_0 \in \begin{bmatrix} \bar s_1, \ldots, \bar s_n \end{bmatrix}\)</span>.
+the continuation wealth <span class="math notranslate nohighlight">\(\psi^i(s_0) = 0\)</span> for all agents <span class="math notranslate nohighlight">\(i = 1, \ldots, I\)</span>.  This indicates that
+the economy begins with  all agents being debt-free and financial-asset-free at time <span class="math notranslate nohighlight">\(0\)</span>, state <span class="math notranslate nohighlight">\(s_0\)</span>.</p>
+<p><strong>Remark:</strong> Note that all agents’ continuation wealths recurrently return to zero when the Markov state returns to whatever value <span class="math notranslate nohighlight">\(s_0\)</span> it had at time <span class="math notranslate nohighlight">\(0\)</span>.</p>
+</div>
+<div class="section" id="optimal-portfolios">
+<h3><span class="section-number">1.2.5. </span>Optimal portfolios<a class="headerlink" href="#optimal-portfolios" title="Permalink to this headline">¶</a></h3>
+<p>A nifty feature of the model is that optimal portfolios for a type <span class="math notranslate nohighlight">\(i\)</span> agent equal
+the continuation wealths that we have just computed.</p>
+<p>Thus, agent <span class="math notranslate nohighlight">\(i\)</span>’s state-by-state purchases of Arrow securities next period depend only on next period’s
+Markov state and equal</p>
+<div class="math notranslate nohighlight">
+\[ a^i(s) = \psi^i(s), s \in \left[\bar s_1, \ldots, \bar s_n \right] \]</div>
+</div>
+<div class="section" id="equilibrium-wealth-distribution-alpha">
+<h3><span class="section-number">1.2.6. </span>Equilibrium wealth distribution <span class="math notranslate nohighlight">\(\alpha\)</span><a class="headerlink" href="#equilibrium-wealth-distribution-alpha" title="Permalink to this headline">¶</a></h3>
+<p>With the initial state being  a particular state <span class="math notranslate nohighlight">\(s_0 \in \left[\bar{s}_1, \ldots, \bar{s}_n\right]\)</span>, we must have</p>
+<div class="math notranslate nohighlight">
+\[
+\psi^i\left(s_0\right) = 0, \quad i=1, \ldots, I
+\]</div>
+<p>which means the equilibrium distribution of wealth satisfies</p>
+<div class="math notranslate nohighlight">
+\[
+\alpha^i = \frac{V_k y^i}{V_k y}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(V \equiv \left[I - Q\right]^{-1}\)</span> and <span class="math notranslate nohighlight">\(k\)</span> is the row index corresponding to the initial state <span class="math notranslate nohighlight">\(s_0\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(\sum_i V_k y^i = V_k y\)</span>,  <span class="math notranslate nohighlight">\(\sum_i \alpha^i = 1\)</span>.</p>
+<p>Below we solve several fun examples with Python code.</p>
+<p>First, we create a Python class to compute  the objects that comprise a competitive equilibrium
+with sequential trading of one-period Arrow securities.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">RecurCompetitive</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class that represents a recursive competitive economy</span>
+<span class="sd">    with one-period Arrow securities.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">s</span><span class="p">,</span>        <span class="c1"># state vector</span>
+                 <span class="n">P</span><span class="p">,</span>        <span class="c1"># transition matrix</span>
+                 <span class="n">ys</span><span class="p">,</span>       <span class="c1"># endowments ys = [y1, y2, .., yI]</span>
+                 <span class="n">γ</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>    <span class="c1"># risk aversion</span>
+                 <span class="n">β</span><span class="o">=</span><span class="mf">0.98</span><span class="p">):</span>  <span class="c1"># discount rate</span>
+
+        <span class="c1"># preference parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">γ</span> <span class="o">=</span> <span class="n">γ</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">β</span> <span class="o">=</span> <span class="n">β</span>
+
+        <span class="c1"># variables dependent on state</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">s</span> <span class="o">=</span> <span class="n">s</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">P</span> <span class="o">=</span> <span class="n">P</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ys</span> <span class="o">=</span> <span class="n">ys</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">ys</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># dimensions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">I</span> <span class="o">=</span> <span class="n">ys</span><span class="o">.</span><span class="n">shape</span>
+
+        <span class="c1"># compute pricing kernel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Q</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pricing_kernel</span><span class="p">()</span>
+        
+        <span class="c1"># compute risk-free rate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">R</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">risk_free_rate</span><span class="p">()</span>
+
+        <span class="c1"># V = [I - Q]^{-1}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">Q</span><span class="p">)</span>
+
+        <span class="c1"># natural debt limit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">V</span> <span class="o">@</span> <span class="n">ys</span>
+
+    <span class="k">def</span> <span class="nf">u_prime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+        <span class="s2">&quot;The first derivative of CRRA utility&quot;</span>
+
+        <span class="k">return</span> <span class="n">c</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">γ</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">pricing_kernel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Compute the pricing kernel matrix Q&quot;</span>
+
+        <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span>
+
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
+        <span class="n">Q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="n">ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">u_prime</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">u_prime</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                <span class="n">Q</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">β</span> <span class="o">*</span> <span class="n">ratio</span> <span class="o">*</span> <span class="n">P</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">Q</span> <span class="o">=</span> <span class="n">Q</span>
+
+        <span class="k">return</span> <span class="n">Q</span>
+
+    <span class="k">def</span> <span class="nf">wealth_distribution</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s0_idx</span><span class="p">):</span>
+        <span class="s2">&quot;Solve for wealth distribution α&quot;</span>
+
+        <span class="c1"># set initial state</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">s0_idx</span> <span class="o">=</span> <span class="n">s0_idx</span>
+
+        <span class="c1"># simplify notations</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
+        <span class="n">Q</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Q</span>
+        <span class="n">y</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ys</span>
+
+        <span class="c1"># row of V corresponding to s0</span>
+        <span class="n">Vs0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">V</span><span class="p">[</span><span class="n">s0_idx</span><span class="p">,</span> <span class="p">:]</span>
+        <span class="n">α</span> <span class="o">=</span> <span class="n">Vs0</span> <span class="o">@</span> <span class="bp">self</span><span class="o">.</span><span class="n">ys</span> <span class="o">/</span> <span class="p">(</span><span class="n">Vs0</span> <span class="o">@</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">α</span> <span class="o">=</span> <span class="n">α</span>
+
+        <span class="k">return</span> <span class="n">α</span>
+
+    <span class="k">def</span> <span class="nf">continuation_wealths</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Given α, compute the continuation wealths ψ&quot;</span>
+
+        <span class="n">diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">I</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">I</span><span class="p">):</span>
+            <span class="n">diff</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">α</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">ys</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span>
+
+        <span class="n">ψ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">V</span> <span class="o">@</span> <span class="n">diff</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ψ</span> <span class="o">=</span> <span class="n">ψ</span>
+
+        <span class="k">return</span> <span class="n">ψ</span>
+    
+    <span class="k">def</span> <span class="nf">risk_free_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Given Q, compute one-period gross risk-free interest rate R&quot;</span>
+        <span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+        <span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Q</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">R</span> <span class="o">=</span> <span class="n">R</span>
+        
+        <span class="k">return</span> <span class="n">R</span>
+    
+    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-1">
+<h3><span class="section-number">1.2.7. </span>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p>Please read the preceding class for default parameter values and the  following Python code for the fundamentals of the economy.</p>
+<p>Here goes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dimensions</span>
+<span class="n">I</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span>
+
+<span class="c1"># states</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># transition</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">]])</span>
+
+<span class="c1"># endowments</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">I</span><span class="p">))</span>
+<span class="n">ys</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">s</span>       <span class="c1"># y1</span>
+<span class="n">ys</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span>           <span class="c1"># y2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex1</span> <span class="o">=</span> <span class="n">RecurCompetitive</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># endowments</span>
+<span class="n">ex1</span><span class="o">.</span><span class="n">ys</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1., 0.],
+       [0., 1.]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pricing kernal</span>
+<span class="n">ex1</span><span class="o">.</span><span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.49, 0.49],
+       [0.49, 0.49]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Risk free rate R</span>
+<span class="n">ex1</span><span class="o">.</span><span class="n">R</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.98, 0.98])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># natural debt limit, A = [A1, A2, ..., AI]</span>
+<span class="n">ex1</span><span class="o">.</span><span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[25.5, 24.5],
+       [24.5, 25.5]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># when the initial state is state 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;α = </span><span class="si">{</span><span class="n">ex1</span><span class="o">.</span><span class="n">wealth_distribution</span><span class="p">(</span><span class="n">s0_idx</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ψ = </span><span class="si">{</span><span class="n">ex1</span><span class="o">.</span><span class="n">continuation_wealths</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>α = [0.51 0.49]
+ψ = [[ 0.  0.]
+ [ 1. -1.]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># when the initial state is state 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;α = </span><span class="si">{</span><span class="n">ex1</span><span class="o">.</span><span class="n">wealth_distribution</span><span class="p">(</span><span class="n">s0_idx</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ψ = </span><span class="si">{</span><span class="n">ex1</span><span class="o">.</span><span class="n">continuation_wealths</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>α = [0.49 0.51]
+ψ = [[-1.  1.]
+ [ 0. -0.]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-2">
+<h3><span class="section-number">1.2.8. </span>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dimensions</span>
+<span class="n">I</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span>
+
+<span class="c1"># states</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># transition</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">]])</span>
+
+<span class="c1"># endowments</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">I</span><span class="p">))</span>
+<span class="n">ys</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.5</span>         <span class="c1"># y1</span>
+<span class="n">ys</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span>           <span class="c1"># y2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex2</span> <span class="o">=</span> <span class="n">RecurCompetitive</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># endowments</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ys = &quot;</span><span class="p">,</span> <span class="n">ex2</span><span class="o">.</span><span class="n">ys</span><span class="p">)</span>
+
+<span class="c1"># pricing kernal</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Q = &quot;</span><span class="p">,</span> <span class="n">ex2</span><span class="o">.</span><span class="n">Q</span><span class="p">)</span>
+
+<span class="c1"># Risk free rate R</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R = &quot;</span><span class="p">,</span> <span class="n">ex2</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ys =  [[1.5 1. ]
+ [1.5 2. ]]
+Q =  [[0.49       0.41412558]
+ [0.57977582 0.49      ]]
+R =  [1.06977582 0.90412558]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pricing kernal</span>
+<span class="n">ex2</span><span class="o">.</span><span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.49      , 0.41412558],
+       [0.57977582, 0.49      ]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Risk free rate R</span>
+<span class="n">ex2</span><span class="o">.</span><span class="n">R</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.06977582, 0.90412558])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># natural debt limit, A = [A1, A2, ..., AI]</span>
+<span class="n">ex2</span><span class="o">.</span><span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[69.30941886, 66.91255848],
+       [81.73318641, 79.98879094]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># when the initial state is state 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;α = </span><span class="si">{</span><span class="n">ex2</span><span class="o">.</span><span class="n">wealth_distribution</span><span class="p">(</span><span class="n">s0_idx</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ψ = </span><span class="si">{</span><span class="n">ex2</span><span class="o">.</span><span class="n">continuation_wealths</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>α = [0.50879763 0.49120237]
+ψ = [[-0.         -0.        ]
+ [ 0.55057195 -0.55057195]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># when the initial state is state 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;α = </span><span class="si">{</span><span class="n">ex2</span><span class="o">.</span><span class="n">wealth_distribution</span><span class="p">(</span><span class="n">s0_idx</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ψ = </span><span class="si">{</span><span class="n">ex2</span><span class="o">.</span><span class="n">continuation_wealths</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>α = [0.50539319 0.49460681]
+ψ = [[-0.46375886  0.46375886]
+ [ 0.         -0.        ]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-3">
+<h3><span class="section-number">1.2.9. </span>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dimensions</span>
+<span class="n">I</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span>
+
+<span class="c1"># states</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># transition</span>
+<span class="n">λ</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="o">-</span><span class="n">λ</span><span class="p">,</span> <span class="n">λ</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+
+<span class="c1"># endowments</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">I</span><span class="p">))</span>
+<span class="n">ys</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>         <span class="c1"># y1</span>
+<span class="n">ys</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>         <span class="c1"># y2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex3</span> <span class="o">=</span> <span class="n">RecurCompetitive</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># endowments</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ys = &quot;</span><span class="p">,</span> <span class="n">ex3</span><span class="o">.</span><span class="n">ys</span><span class="p">)</span>
+
+<span class="c1"># pricing kernel</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Q = &quot;</span><span class="p">,</span> <span class="n">ex3</span><span class="o">.</span><span class="n">Q</span><span class="p">)</span>
+
+<span class="c1"># Risk free rate R</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R = &quot;</span><span class="p">,</span> <span class="n">ex3</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ys =  [[1. 0.]
+ [0. 1.]]
+Q =  [[0.098 0.882]
+ [0.    0.98 ]]
+R =  [0.098 1.862]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pricing kernel</span>
+<span class="n">ex3</span><span class="o">.</span><span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.098, 0.882],
+       [0.   , 0.98 ]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># natural debt limit, A = [A1, A2, ..., AI]</span>
+<span class="n">ex3</span><span class="o">.</span><span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 1.10864745, 48.89135255],
+       [ 0.        , 50.        ]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that the natural debt limit for agent <span class="math notranslate nohighlight">\(1\)</span> in state <span class="math notranslate nohighlight">\(2\)</span> is <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># when the initial state is state 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;α = </span><span class="si">{</span><span class="n">ex3</span><span class="o">.</span><span class="n">wealth_distribution</span><span class="p">(</span><span class="n">s0_idx</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ψ = </span><span class="si">{</span><span class="n">ex3</span><span class="o">.</span><span class="n">continuation_wealths</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>α = [0.02217295 0.97782705]
+ψ = [[ 0.         -0.        ]
+ [ 1.10864745 -1.10864745]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># when the initial state is state 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;α = </span><span class="si">{</span><span class="n">ex3</span><span class="o">.</span><span class="n">wealth_distribution</span><span class="p">(</span><span class="n">s0_idx</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ψ = </span><span class="si">{</span><span class="n">ex3</span><span class="o">.</span><span class="n">continuation_wealths</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>α = [0. 1.]
+ψ = [[-1.10864745  1.10864745]
+ [ 0.          0.        ]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>For the specification of the Markov chain in example 3, let’s take a look at how the equilibrium allocation changes as a function of transition probability <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">λ_seq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># prepare containers</span>
+<span class="n">αs0_seq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">λ_seq</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">αs1_seq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">λ_seq</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">λ</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">λ_seq</span><span class="p">):</span>
+    <span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="o">-</span><span class="n">λ</span><span class="p">,</span> <span class="n">λ</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+    <span class="n">ex3</span> <span class="o">=</span> <span class="n">RecurCompetitive</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+
+    <span class="c1"># initial state s0 = 1</span>
+    <span class="n">α</span> <span class="o">=</span> <span class="n">ex3</span><span class="o">.</span><span class="n">wealth_distribution</span><span class="p">(</span><span class="n">s0_idx</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">αs0_seq</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">α</span>
+
+    <span class="c1"># initial state s0 = 2</span>
+    <span class="n">α</span> <span class="o">=</span> <span class="n">ex3</span><span class="o">.</span><span class="n">wealth_distribution</span><span class="p">(</span><span class="n">s0_idx</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">αs1_seq</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">α</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">αs_seq</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="n">αs0_seq</span><span class="p">,</span> <span class="n">αs1_seq</span><span class="p">]):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">λ_seq</span><span class="p">,</span> <span class="n">αs_seq</span><span class="p">[:,</span> <span class="n">j</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;α</span><span class="si">{</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;λ&#39;</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;initial state s0 = </span><span class="si">{</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/RCE_tom_v5_46_0.png" src="_images/RCE_tom_v5_46_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-4">
+<h2><span class="section-number">1.3. </span>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dimensions</span>
+<span class="n">I</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+
+<span class="c1"># states</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="c1"># transition</span>
+<span class="n">λ</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">μ</span> <span class="o">=</span> <span class="o">.</span><span class="mi">9</span>
+<span class="n">δ</span> <span class="o">=</span> <span class="o">.</span><span class="mi">05</span>
+
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="o">-</span><span class="n">λ</span><span class="p">,</span> <span class="n">λ</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">μ</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">μ</span><span class="p">,</span> <span class="n">μ</span><span class="o">/</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="n">δ</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">δ</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">δ</span><span class="p">]])</span>
+
+<span class="c1"># endowments</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">I</span><span class="p">))</span>
+<span class="n">ys</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">.</span><span class="mi">25</span><span class="p">,</span> <span class="o">.</span><span class="mi">75</span><span class="p">,</span> <span class="o">.</span><span class="mi">2</span>       <span class="c1"># y1</span>
+<span class="n">ys</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.25</span><span class="p">,</span> <span class="o">.</span><span class="mi">25</span><span class="p">,</span> <span class="o">.</span><span class="mi">2</span>           <span class="c1"># y2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex4</span> <span class="o">=</span> <span class="n">RecurCompetitive</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># endowments</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ys = &quot;</span><span class="p">,</span> <span class="n">ex4</span><span class="o">.</span><span class="n">ys</span><span class="p">)</span>
+
+<span class="c1"># pricing kernal</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Q = &quot;</span><span class="p">,</span> <span class="n">ex4</span><span class="o">.</span><span class="n">Q</span><span class="p">)</span>
+
+<span class="c1"># Risk free rate R</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R = &quot;</span><span class="p">,</span> <span class="n">ex4</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
+<span class="n">ex4</span><span class="o">.</span><span class="n">R</span>
+
+<span class="c1"># natural debt limit, A = [A1, A2, ..., AI]</span>
+<span class="n">ex4</span><span class="o">.</span><span class="n">A</span>
+
+<span class="c1"># when the initial state is state 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;when the initial state is state 1&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;α = </span><span class="si">{</span><span class="n">ex4</span><span class="o">.</span><span class="n">wealth_distribution</span><span class="p">(</span><span class="n">s0_idx</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ψ = </span><span class="si">{</span><span class="n">ex4</span><span class="o">.</span><span class="n">continuation_wealths</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># when the initial state is state 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;when the initial state is state 2&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;α = </span><span class="si">{</span><span class="n">ex4</span><span class="o">.</span><span class="n">wealth_distribution</span><span class="p">(</span><span class="n">s0_idx</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ψ = </span><span class="si">{</span><span class="n">ex4</span><span class="o">.</span><span class="n">continuation_wealths</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># when the initial state is state 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;when the initial state is state 3&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;α = </span><span class="si">{</span><span class="n">ex4</span><span class="o">.</span><span class="n">wealth_distribution</span><span class="p">(</span><span class="n">s0_idx</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ψ = </span><span class="si">{</span><span class="n">ex4</span><span class="o">.</span><span class="n">continuation_wealths</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ys =  [[0.25 1.25]
+ [0.75 0.25]
+ [0.2  0.2 ]]
+Q =  [[0.098      1.08022498 0.        ]
+ [0.36007499 0.882      0.69728222]
+ [0.01265175 0.01549516 0.049     ]]
+R =  [0.47072674 1.97772014 0.74628222]
+when the initial state is state 1
+α = [0.63920196 0.36079804]
+ψ = [[-0.          0.        ]
+ [-0.65616233  0.65616233]
+ [ 0.04785851 -0.04785851]]
+when the initial state is state 2
+α = [0.52372722 0.47627278]
+ψ = [[ 0.5937814  -0.5937814 ]
+ [ 0.          0.        ]
+ [ 0.01787935 -0.01787935]]
+when the initial state is state 3
+α = [0.45485896 0.54514104]
+ψ = [[ 0.94790813 -0.94790813]
+ [ 0.39133024 -0.39133024]
+ [-0.         -0.        ]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                    </div>
+                    
+                </main> <!-- .page__content -->
+                
+
+
+
+
+            </div> <!-- .page -->
+
+            
+            <div class="sidebar bd-sidebar inactive" id="site-navigation">
+
+                <div class="sidebar__header">
+
+
+                    Contents
+
+                </div>
+
+                <nav class="sidebar__nav" id="sidebar-nav" aria-label="Main navigation">
+                    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   PhD Macro with Python
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Competitive equilibrium with one-period Arrow securities
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markov_asset.html">
+   2. Asset Pricing: Finite State Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="harrison_kreps.html">
+   3. Asset Pricing with Incomplete Markets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cons_news.html">
+   4. Information and Consumption Smoothing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="smoothing.html">
+   5. Consumption Smoothing with Complete and Incomplete Markets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="smoothing_tax.html">
+   6. Tax Smoothing with Complete and Incomplete Markets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="robustness.html">
+   7. Robustness
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markov_jump_lq.html">
+   8. Markov Jump Linear Quadratic Dynamic Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tax_smoothing_1.html">
+   9. How to Pay for a War: Part 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BCG_complete_mkts.html">
+   10. Irrelevance of Capital Structures with Complete Markets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BCG_incomplete_mkts.html">
+   11. Equilibrium Capital Structures with Incomplete Markets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dyn_stack.html">
+   12. Stackelberg Plans
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="troubleshooting.html">
+   13. Troubleshooting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="zreferences.html">
+   14. References
+  </a>
+ </li>
+</ul>
+
+                </nav>
+
+                <div class="sidebar__footer">
+
+                </div>
+
+            </div> <!-- .sidebar -->
+            
+        </div> <!-- .main -->
+
+        <div class="toolbar">
+
+            <div class="toolbar__inner">
+
+                <ul class="toolbar__main">
+                    <li data-tippy-content="Table of Contents" class="btn__sidebar"><i data-feather="menu"></i></li>
+                    <li data-tippy-content="Home"><a href="intro.html"><i data-feather="home"></i></a></li>
+                    <li class="btn__qelogo"><a href="" title=""><span class="show-for-sr"></span></a></li>
+                    <!-- <li class="btn__search">
+                        <form action="search.html" method="get">
+                            <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off">
+                            <i data-feather="search"></i>
+                        </form>
+                    </li> -->
+                </ul>
+
+                <ul class="toolbar__links">
+                    <li data-tippy-content="Fullscreen" class="btn__fullscreen"><i data-feather="maximize"></i></li>
+                    <li data-tippy-content="Increase font size" class="btn__plus"><i data-feather="plus-circle"></i></li>
+                    <li data-tippy-content="Decrease font size" class="btn__minus"><i data-feather="minus-circle"></i></li>
+                    <li data-tippy-content="Change contrast" class="btn__contrast"><i data-feather="sunset"></i></li>
+                    
+                    <li data-tippy-content="Download PDF" onClick="window.print()"><i data-feather="file"></i></li>
+                    <li data-tippy-content="View Source"><a href="_sources/RCE_tom_v5.ipynb" download><i data-feather="github"></i></a></li>
+                </ul>
+
+            </div>
+
+
+        </div> <!-- .toolbar -->
+
+    </div> <!-- .wrapper-->
+
+<script src="_static/plugins.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+
+
+    <script src=[></script>
+
+    <script src=]></script>
+
+<script src="_static/scripts.js"></script>
+<script>
+    feather.replace()
+    tippy('[data-tippy-content]');
+</script>
+
+
+  </body>
+</html>
