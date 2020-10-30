@@ -1,5 +1,6 @@
 - file: intro
   numbered: true
+- file: RCE_tom_v5
 - file: markov_asset
 - file: harrison_kreps
 - file: cons_news
