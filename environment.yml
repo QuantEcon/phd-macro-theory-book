@@ -1,7 +1,6 @@
-name: phd-macro-theory-book
+name: quantecon
 channels:
   - default
-  - conda-forge
 dependencies:
   - pip
   - python=3.8
@@ -9,8 +8,10 @@ dependencies:
   - pip:
     - jupytext
     - jupyter-book
+    - jupinx
     - git+https://github.com/executablebooks/sphinx-multitoc-numbering
     - git+https://github.com/quantecon/quantecon-book-theme
     - joblib
     - interpolation
     - ghp-import
+
