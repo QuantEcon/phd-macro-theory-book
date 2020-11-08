@@ -71,9 +71,7 @@ Q(s_{t+1} | s_t ) = {\beta u'_i(c_{t+1}^i) \pi(s_{t+1} | s_t)
                  $$
                  
 where it is understood that $c_t^i = c^i(s_t)$
-and
-
-$c_{t+1}^i = c^i(s_{t+1})$.
+and $c_{t+1}^i = c^i(s_{t+1})$.
 
 
 
