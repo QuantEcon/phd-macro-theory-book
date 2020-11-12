@@ -26,7 +26,7 @@
     <script src="_static/quantecon-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
@@ -213,21 +213,21 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already up-to-date: quantecon in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (0.4.8)
-Requirement already satisfied, skipping upgrade: numpy in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (1.18.5)
-Requirement already satisfied, skipping upgrade: numba&gt;=0.38 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (0.50.1)
-Requirement already satisfied, skipping upgrade: scipy&gt;=1.0.0 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (1.5.0)
-Requirement already satisfied, skipping upgrade: sympy in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (1.6.1)
-Requirement already satisfied, skipping upgrade: requests in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from quantecon) (2.24.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already up-to-date: quantecon in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (0.4.8)
+Requirement already satisfied, skipping upgrade: numba&gt;=0.38 in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (from quantecon) (0.50.1)
+Requirement already satisfied, skipping upgrade: sympy in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (from quantecon) (1.6.1)
+Requirement already satisfied, skipping upgrade: requests in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (from quantecon) (2.24.0)
+Requirement already satisfied, skipping upgrade: numpy in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (from quantecon) (1.18.5)
+Requirement already satisfied, skipping upgrade: scipy&gt;=1.0.0 in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (from quantecon) (1.5.0)
+Requirement already satisfied, skipping upgrade: llvmlite&lt;0.34,&gt;=0.33.0.dev0 in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (0.33.0+1.g022ab0f)
+Requirement already satisfied, skipping upgrade: setuptools in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (49.2.0.post20200714)
+Requirement already satisfied, skipping upgrade: mpmath&gt;=0.19 in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (from sympy-&gt;quantecon) (1.1.0)
+Requirement already satisfied, skipping upgrade: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (from requests-&gt;quantecon) (1.25.9)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied, skipping upgrade: llvmlite&lt;0.34,&gt;=0.33.0.dev0 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (0.33.0+1.g022ab0f)
-Requirement already satisfied, skipping upgrade: setuptools in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from numba&gt;=0.38-&gt;quantecon) (49.2.0.post20200714)
-Requirement already satisfied, skipping upgrade: mpmath&gt;=0.19 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from sympy-&gt;quantecon) (1.1.0)
-Requirement already satisfied, skipping upgrade: idna&lt;3,&gt;=2.5 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from requests-&gt;quantecon) (2.10)
-Requirement already satisfied, skipping upgrade: certifi&gt;=2017.4.17 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from requests-&gt;quantecon) (2020.6.20)
-Requirement already satisfied, skipping upgrade: chardet&lt;4,&gt;=3.0.2 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from requests-&gt;quantecon) (3.0.4)
-Requirement already satisfied, skipping upgrade: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /Users/matthewmckay/anaconda3/envs/phd-macro-theory-book/lib/python3.8/site-packages (from requests-&gt;quantecon) (1.25.9)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied, skipping upgrade: certifi&gt;=2017.4.17 in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (from requests-&gt;quantecon) (2020.6.20)
+Requirement already satisfied, skipping upgrade: chardet&lt;4,&gt;=3.0.2 in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (from requests-&gt;quantecon) (3.0.4)
+Requirement already satisfied, skipping upgrade: idna&lt;3,&gt;=2.5 in /Users/matthewmckay/anaconda3/envs/quantecon/lib/python3.8/site-packages (from requests-&gt;quantecon) (2.10)
 </pre></div>
 </div>
 </div>
@@ -884,7 +884,7 @@ case, we can simply replace the corresponding matrices.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fcb77630340&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa51be2d400&gt;
 </pre></div>
 </div>
 <img alt="_images/cons_news_15_1.png" src="_images/cons_news_15_1.png" />
@@ -921,7 +921,7 @@ permanently <strong>decreases</strong> by <span class="math notranslate nohighli
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fcb77798a60&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa51bf96820&gt;
 </pre></div>
 </div>
 <img alt="_images/cons_news_18_1.png" src="_images/cons_news_18_1.png" />
@@ -960,7 +960,7 @@ of consumers while always presenting both types with the same
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fcb77cd83d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa51c5cef40&gt;
 </pre></div>
 </div>
 <img alt="_images/cons_news_21_1.png" src="_images/cons_news_21_1.png" />
@@ -978,7 +978,7 @@ of consumers while always presenting both types with the same
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fcb73e1a1c0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa51c5affd0&gt;
 </pre></div>
 </div>
 <img alt="_images/cons_news_22_1.png" src="_images/cons_news_22_1.png" />
@@ -1208,7 +1208,7 @@ Eric Leeper, Todd Walker, and Susan Yang <a class="bibtex reference internal" hr
                     <li data-tippy-content="Download Notebook"><a href="_sources/cons_news.ipynb" download><i data-feather="download-cloud"></i></a></li>
                     
                     <li data-tippy-content="Download PDF" onClick="window.print()"><i data-feather="file"></i></li>
-                    <li data-tippy-content="View Source"><a href="_sources/cons_news.md" download><i data-feather="github"></i></a></li>
+                    <li data-tippy-content="View Source"><a target="_blank" href="https://github.com/executablebooks/jupyter-book/cons_news.md" download><i data-feather="github"></i></a></li>
                 </ul>
 
             </div>
